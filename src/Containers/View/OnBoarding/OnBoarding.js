@@ -1,16 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 import Aux from '../../../hoc/hoc';
 import Header from '../../../Components/Navigation/Header';
 import Footer from '../../../Components/Navigation/Footer';
-import './Home.scss';
+import Pyro from '../../../assets/images/page_2.png';
 
-import Pyro from '../../../assets/images/Group_10.png'
-
-const home = (props) => {
+const onboarding = (props)=>{
     return (
         <Aux>
-            <div className="Home">
+            <div className="OnBoarding">
                 <Header />
                 <main className="mt-6e mb-6e">
                     <div className="intro">
@@ -19,7 +18,7 @@ const home = (props) => {
                             A Social & Communication <br />
                             Platform For The Christian Faith
                         </h2>
-                        <p className="c-brand f-20 text-center">
+                        <p className="c-red f-20 text-center">
                             To make a donation to the welfare to help those in need 
                             <Link to="/onboarding">
                                 <i className="fa fa-long-arrow-right c-red ml-3"></i>
@@ -32,8 +31,8 @@ const home = (props) => {
                 </main>
                 <Footer />
             </div>
-            
         </Aux>
     )
 }
-export default home;
+
+export default onboarding;
