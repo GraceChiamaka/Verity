@@ -16,6 +16,7 @@
 .f-16{ font-size: $size-2; }
 .f-18{ font-size: $size-3; }
 .f-20{ font-size: $size-4; }
+.f-24{ font-size: 24px; }
 .f-52{ 
     font-size: $size-x;
     @include screenSize(ss-phone){
@@ -31,6 +32,7 @@
 .f-med{ font-weight: 500; }
 
 //MARGIN
+.mt-6{ margin-top: $size-lg-2; }
 .mt-6e{ margin-top: $size-lg; }
 .mb-6e{ margin-bottom: $size-lg; }
 

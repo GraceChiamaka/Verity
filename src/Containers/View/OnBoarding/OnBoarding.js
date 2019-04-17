@@ -1,9 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Aux from '../../../hoc/hoc';
 import Header from '../../../Components/Navigation/Header';
 import Footer from '../../../Components/Navigation/Footer';
+import './OnBoarding.scss';
 import Pyro from '../../../assets/images/page_2.png';
 
 const onboarding = (props)=>{
@@ -20,7 +21,7 @@ const onboarding = (props)=>{
                         </h2>
                         <p className="c-red f-20 text-center">
                             To make a donation to the welfare to help those in need 
-                            <Link to="/onboarding">
+                            <Link to="/register">
                                 <i className="fa fa-long-arrow-right c-red ml-3"></i>
                             </Link>
                         </p>
