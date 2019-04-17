@@ -1,15 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Aux from '../../hoc/hoc';
 import Logo from '../../assets/images/s4.png';
+import '../../assets/scss/_base.scss';
 
 const footer = (props) => {
     return (
         <Aux>
-            <div className="footer bd-red">
+            <footer className="footer bd-red">
                 <div className="container">
                     <div className="row justify-content-between ">
                         <div className="col-md-2 col-lg-3">
-                            <img src={Logo} alt="logo" />
+                            <a className="dis-block" href="/">
+                                <img src={Logo} alt="logo" />
+                            </a>
+                            
                         </div>
                         <div className="col-md-4 col-lg-3 pt-4">
                             <i className="fa fa-copyright c-brand"></i>
@@ -26,7 +31,7 @@ const footer = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         </Aux>
     )
 }
