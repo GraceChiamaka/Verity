@@ -13,10 +13,10 @@ const login = (props) => {
                 <main className="">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-6">
+                            <div className="col-md-6 col-lg-6">
                                 <img src={Logo} alt="big-logo" />
                             </div>
-                            <div className="col-lg-6 pt-5 mt-5">
+                            <div className="col-md-6 col-lg-6 pt-5 mt-5">
                                 <div className="SignUp-intro">
                                     <h3 className="f-24 c-blk">
                                         Login to your verity Account Now

@@ -3,11 +3,13 @@ import {Link} from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
 import Header from '../../../Components/Navigation/Header';
 import Footer from '../../../Components/Navigation/Footer';
+import Square from '../../../Components/Square/Square';
 import './Home.scss';
 
 import Pyro from '../../../assets/images/Group_10.png'
 
 const home = (props) => {
+    
     return (
         <Aux>
             <div className="Home">
@@ -29,6 +31,8 @@ const home = (props) => {
                     <div className="info text-center">
                         <img src={Pyro} className="w-50" alt="info square" />
                     </div>
+                    <Square>
+                    </Square>
                 </main>
                 <Footer />
             </div>

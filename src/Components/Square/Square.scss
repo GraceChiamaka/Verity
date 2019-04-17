@@ -1,0 +1,17 @@
+@import '../../assets/scss/variables';
+
+.Square-container{
+    width: 210px;
+    height: 210px;
+    border: 1px solid $color-2;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+.Square{
+    width: 132px;
+    height: 132px;
+    margin: 38px auto;
+    background: $color-1;
+    color:#fff;
+
+}
