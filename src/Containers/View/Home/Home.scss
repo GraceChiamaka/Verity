@@ -12,5 +12,19 @@
     main{
         flex: 1 0 auto;
         width: 100%;
+        .info{
+            margin-top: 4rem;
+        }
+    }
+    .form-check-input{
+        width: 20px;
+        height: 20px;
+        &:after{
+            color: blue;
+        }
+    }
+    input[type='radio']{
+        background-color: blue !important;
     }
 }
+.mr-5e{ margin-right: 5rem; }

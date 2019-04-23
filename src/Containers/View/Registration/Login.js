@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
-import Footer from '../../../Components/Navigation/Footer';
 import './Register.scss';
 
 import Logo from '../../../assets/images/big_logo.png'
@@ -47,7 +46,6 @@ const login = (props) => {
                         </div>
                     </div>
                 </main>
-                <Footer />
             </div>
         </Aux>
     )

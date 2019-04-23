@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
 import Header from '../../../Components/Navigation/Header';
 import Footer from '../../../Components/Navigation/Footer';
+import Square from '../../../Components/Square/Square';
 import './OnBoarding.scss';
-import Pyro from '../../../assets/images/page_2.png';
 
 const onboarding = (props)=>{
     return (
@@ -27,7 +27,31 @@ const onboarding = (props)=>{
                         </p>
                     </div>
                     <div className="info text-center">
-                        <img src={Pyro} className="w-50" alt="info square" />
+                        <a href="/register">
+                            <Square>
+                                <span>Signup</span>
+                            </Square>
+                        </a>
+                        
+                        <Square>
+                            <span>Church Organisation Flatform</span>
+                        </Square>
+                        <Square>
+                            <span>Biblical Research (Search Engine)</span>
+                        </Square>
+                        <Square>
+                            <span>Registry Directory Event Locator</span>
+                        </Square>
+                        <div className="mt-4">
+                            <Square>
+                                <span className="">
+                                    Welfare
+                                </span>
+                            </Square>
+                            <Square className="mb-5e">
+                                <span>Devotional Online Store</span>
+                            </Square>
+                        </div>
                     </div>
                 </main>
                 <Footer />

@@ -4,6 +4,7 @@ import Home from '../Containers/View/Home/Home';
 import OnBoarding from '../Containers/View/OnBoarding/OnBoarding';
 import Register from '../Containers/View/Registration/Regsiter';
 import Login from '../Containers/View/Registration/Login';
+import Admin from '../Containers/View/Admin/Admin';
 
 export default () => (
     <BrowserRouter>
@@ -12,6 +13,7 @@ export default () => (
             <Route path="/onboarding" component={OnBoarding} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
+            <Route path="/admin" component={Admin} />
         </div>
     </BrowserRouter>
 );

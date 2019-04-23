@@ -6,12 +6,32 @@
     border: 1px solid $color-2;
     transform: rotate(45deg);
     display: inline-block;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    .Square{
+        width: 168px;
+        height: 168px;
+        background-image: url('../../assets/images/Frame.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 23px auto;
+        background-color: $color-1;
+        color:#fff;
+        text-align: center;
+        font-size: $size-2;
+        padding-top: 3.5rem;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-2;
+        }
+        span{
+            transform: rotate(-45deg);
+            height: 50px;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+    }
 }
-.Square{
-    width: 132px;
-    height: 132px;
-    margin: 38px auto;
-    background: $color-1;
-    color:#fff;
-
-}
+.mb-5e{ margin-bottom: 5rem !important; }

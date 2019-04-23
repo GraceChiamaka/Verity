@@ -4,6 +4,8 @@
 /*** COLORS ***/
 .c-brand{ color: $color-1 !important; }
 .c-red{ color: $color-2 !important; }
+.c-grey{ color: #828282; }
+.c-blue{ color: rgba(8, 88, 125, 0.7); }
 
 //Borders
 .bd-left--brand{ border-left: 1px solid $color-1; }
@@ -36,6 +38,13 @@
 .mt-6e{ margin-top: $size-lg; }
 .mb-6e{ margin-bottom: $size-lg; }
 
+.btn-brand{
+    height: 40px;
+    width: 132px;
+    background: linear-gradient(180deg, #D97159 0%, #08587D 100%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
 
 .nav-link{
     &:hover{

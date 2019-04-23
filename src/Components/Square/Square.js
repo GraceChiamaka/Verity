@@ -3,11 +3,9 @@ import './Square.scss';
 
 const square = (props) => {
     return (
-        <div className="text-center border">
-            <div className="Square-container">
-                <div className="Square"></div>
+            <div className="Square-container" onClick={props.show} >
+                <div className="Square">{props.children}</div>
             </div>
-        </div>
     )
 }
 

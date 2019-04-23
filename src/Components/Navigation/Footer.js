@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Aux from '../../hoc/hoc';
 import Logo from '../../assets/images/s4.png';
 import '../../assets/scss/_base.scss';
