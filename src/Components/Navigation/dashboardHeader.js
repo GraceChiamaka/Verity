@@ -13,34 +13,34 @@ const dashboardHeader = (props) => {
             <header className="DashboardHeader f-quick bg-white">
                 <div className="container f-quick">
                     <nav className="navbar navbar-expand-lg navbar-light bg-white">
-                        <NavLink className="c-blue mr-5" to='/'>
-                            <i className="fa fa-home fa-2x c-blue mr-1"></i>
-                            <span className="f-14 f-bold">Home</span>
-                        </NavLink>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto">
-                                <li className="nav-item">
-                                    <NavLink className="nav-link f-18 mr-5" to="">
-                                        <i className="fa fa-bell-o fa-2x mr-1 c-blue"></i>
-                                        <span className="f-14 f-bold c-blue">Notifications</span>
+                                <li className='nav-item'>
+                                    <NavLink className="nav-link mr-5" to='/'>
+                                        <i className="fa fa-home c-blue mr-1"></i>
+                                        <span className="f-16 f-bold c-blue">Home</span>
                                     </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link f-18 navbar-brand mr-5" to="/register">
-                                        <i className="fa fa-envelope-o fa-2x mr-1 c-blue"></i>
-                                        <span className="f-14 f-bold c-blue">Messages</span>
+                                    <NavLink className="nav-link mr-5" to="">
+                                        <i className="fa fa-bell-o mr-1 c-blue"></i>
+                                        <span className="f-16 f-bold c-blue">Notifications</span>
                                     </NavLink>
                                 </li>
-                                
+                                <li className="nav-item">
+                                    <NavLink className="nav-link navbar-brand mr-5" to="/register">
+                                        <i className="fa fa-envelope-o mr-1 c-blue"></i>
+                                        <span className="f-16 f-bold c-blue">Messages</span>
+                                    </NavLink>
+                                </li>
                             </ul>
                             <ul className="navbar-nav mr-auto">
                                 <NavLink>
-                                    <img src={Logo} alt="logo" />
+                                    <img src={Logo} className='w-75' alt="logo" />
                                 </NavLink>
                             </ul>
                             <ul className="navbar-nav ml-auto">

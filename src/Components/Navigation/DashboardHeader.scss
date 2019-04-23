@@ -5,8 +5,24 @@
 }
 .navbar{
     padding: 0;
-    a:hover{
-        text-decoration: underline;
+    .navbar-collapse{
+        align-items: flex-end;
+    }
+    .navbar-nav{
+        
+        .nav-item{
+            .nav-link{
+                &:hover{
+                    background: transparent !important;
+                    border-bottom: 2px solid $color-1;
+                }
+                i.fa{
+                    &hover{
+                        background: $color-1;
+                    }
+                }
+            }
+        }
     }
 }
 .user-img{

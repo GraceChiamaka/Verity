@@ -1,5 +1,5 @@
 @import '../../../assets/scss/variables';
-.Admin{
+.Admin, .User{
     background:rgba(224, 224, 224, 0.5);
     padding-bottom: 4rem;
 }
@@ -29,6 +29,7 @@
 .nav-tabs .nav-link.active{
     color: $color-2 !important;
 }
+
 .pos-rel{ position: relative; }
 .f-12{ font-size: 12px; }
 .user-section{
