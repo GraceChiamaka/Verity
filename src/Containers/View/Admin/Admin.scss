@@ -1,36 +1,9 @@
 @import '../../../assets/scss/variables';
-.Admin, .User{
+.Admin, .User, .Branch{
     background:rgba(224, 224, 224, 0.5);
     padding-bottom: 4rem;
 }
-.nav-tabs{
-    border-bottom: 1px solid #dee2e6;
-    height: 60px;
-    background: white;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-    .nav-link{
-        color: $color-1 !important;
-        font-size: $size-1;
-        font-weight: bold;
-        border: none !important;
-         &:hover{
-            color: #fff !important;
-        }
-        .active{
-            color: $color-2 !important;
-            &:hover{
-                background: $color-1;
-                color: $color-2 !important;
-            }
-        } 
-    } 
-}
-.nav-tabs .nav-link.active{
-    color: $color-2 !important;
-}
-
-.pos-rel{ position: relative; }
+.bd-grey{ border: 1px solid #E0E0E0; }
 .f-12{ font-size: 12px; }
 .user-section{
     position: relative;
@@ -64,15 +37,15 @@
     }
 }
 input.form-control{
-        width: 239px;
-        height: 36px;
-        padding-left: 10px;
-        padding-right: 10px;
-        background: #F2F2F2;
-        border: 0.75px solid #E0E0E0;
-        box-sizing: border-box;
-        border-radius: 8px;
-    }
+    width: 97%;
+    height: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #F2F2F2;
+    border: 0.75px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
 .church-section{
     background: #FFFFFF;
     border: 1px solid #E0E0E0;

@@ -6,6 +6,7 @@ import Register from '../Containers/View/Registration/Regsiter';
 import Login from '../Containers/View/Registration/Login';
 import Admin from '../Containers/View/Admin/Admin';
 import User from '../Containers/View/User/User';
+import Branch from '../Containers/View/Branch/Branch';
 
 export default () => (
     <BrowserRouter>
@@ -16,6 +17,7 @@ export default () => (
             <Route path="/login" component={Login} />
             <Route path="/admin" component={Admin} />
             <Route path="/user" component={User} />
+            <Route path="/branch" component={Branch} />
         </div>
     </BrowserRouter>
 );

@@ -3,31 +3,63 @@ import { Tabs, Tab } from 'react-bootstrap';
 
 import Header from '../../../Components/Navigation/dashboardHeader';
 import CustomNav from '../../../Components/Navigation/CustomNav/CustomNav';
-import './Admin.scss';
-
+import '../Admin/Admin.scss';
+import './Branch.scss';
 import user from '../../../assets/images/user_1.png';
 import ChurchLogo from '../../../assets/images/church_logo.png';
 import UserImg from '../../../assets/images/user_2.png';
 import  UserPost from '../../../assets/images/post_1.png';
+import Church from '../../../assets/images/church.png';
 
-const admin = (props) => {
+const branch = (props) => {
     return (
-        <div className="Admin">
+        <div className="Branch">
             <Header />
-            <main>
-                <div className="container mt-3 px-0">
+            <div className="branch-bg">
+                <div className="container">
                     <CustomNav />
-                    <div className="row mt-3 justify-content-center">
-                        <div className="col-lg-3 ">
-                            <div className="bd-grey">
-                                <div className="user-section">
-                                    <div className="user-block"></div>
-                                        <img src={user} alt='user big' />
-                                    <div className="user-details text-center">
-                                        <p className="f-14 f-bold c-blk">Akintunde Williams</p>
-                                        <p className="f-12 f-med c-grey">Administrative officer for Deeper Life <br /> Bible Church</p>
-                                    </div>
+                </div>
+            </div>
+            <main>
+                <div className="banner">
+                    <div className="container">
+                        <div className="row justify-content-between">
+                            <div className="col-lg-3 pos-rel">
+                                <div className="banner-img">
+                                    <img src={Church} alt='deeper life church' />
                                 </div>
+                            </div>
+                            <div className="col-lg-7">
+                                <ul className="branch-tabs">
+                                    <li className="branch-item active f-16 c-brand f-bold">
+                                        <a> Posts <span className="post-count">(234)</span> </a>
+                                    </li>
+                                    <li className="branch-item">
+                                        <a> Members<span className='member-count'>(120)</span> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-lg-2 pt-1">
+                                <button className="btn btn-brand text-white">Message</button>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <div className="container">
+                    <div className="row justify-content-between">
+                        <div className="col-lg-3">
+                            {/* church details */}
+                            <div className="church-details">
+                                <p className="c-grey f-14 f-med mb-0">Deeper Life Bible Church, </p>
+                                <p className="f-14 c-grey f-med">Montgomery Road Sabo, Yaba.</p>
+                                <p className=" mt-3 f-12 f-med c-blue">
+                                    <i className="fa fa-map-marker mr-1"></i>
+                                    Sabo Yaba, Lagos.
+                                </p>
+                                <p className="c-blue f-12 f-med">
+                                    <i className="fa fa-calendar mr-1"></i>
+                                    Joined March 2019
+                                </p>
                             </div>
                             <div className="resources-section p-3 mt-3">
                                 <h3 className="f-18">Resources</h3>
@@ -86,10 +118,10 @@ const admin = (props) => {
                                     </li>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div className="col-lg-6">
-                            <section className="posts">
+                            <section className="posts mt-4">
                                 <section className="create-post p-3">
                                     <div class="media">
                                         <img src={UserImg} class="mr-3" alt="logged in user" />
@@ -398,48 +430,62 @@ const admin = (props) => {
                                         </div>
                                     </div>
                                 </section>
-                            </section> 
+                            </section>
                         </div>
                         <div className="col-lg-3">
-                            <div className="church-section text-center">
-                                <img src={ChurchLogo} alt="church logo" />
-                                <p className="f-16 c-bold c-brand">Deeper Life Bible Church</p>
-                            </div>
                             <div className="church-branches mt-3 bg-white p-3">
-                                <h3 className="f-18">Branches</h3>
-                                <input className="form-control" placeholder="search" />
-                                <p className="f-12 c-grey f-med">Search by state, area, name...</p>
+                                <h3 className="f-18">Members</h3>
+                                <input className="form-control" placeholder="Search member" />
                                 <div className="branches mt-3">
-                                    <li className="list-unstyled">
-                                        <a className="f-12 c-brand f-med" href='/'>Deeper Life Bible Church, Gbagaba</a>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
                                     </li>
-                                    <li className="list-unstyled mt-2">
-                                        <a className="f-12 c-brand f-med" href='/'>Deeper Life Bible Church, Gbagaba</a>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
                                     </li>
-                                    <li className="list-unstyled mt-2">
-                                        <a className="f-12 c-brand f-med" href='/'>Deeper Life Bible Church, Gbagaba</a>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
                                     </li>
-                                    <li className="list-unstyled mt-2">
-                                        <a className="f-12 c-brand f-med" href='/'>Deeper Life Bible Church, Gbagaba</a>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
                                     </li>
-                                    <li className="list-unstyled mt-2">
-                                        <a className="f-12 c-brand f-med" href='/'>Deeper Life Bible Church, Gbagaba</a>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
                                     </li>
-                                    <li className="list-unstyled mt-2">
-                                        <a className="f-12 c-brand f-med" href='/'>Deeper Life Bible Church, Gbagaba</a>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
+                                    </li>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
+                                    </li>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
+                                    </li>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
+                                    </li>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
+                                    </li>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-14 c-brand f-med" href='/'>Adebowale Johnson</a>
+                                    </li>
+                                    <li className="list-unstyled mb-2">
+                                        <a className="f-12 c-brand f-med" href='/'>Adebowale Johnson</a>
                                     </li>
                                     <a className="c-brand f-14 mt-3 f-med">
                                         <i className="fa fa-plus mr-2"></i>
-                                        Add branch
+                                        Add member
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>            
             </main>
-        </div>   
-    );
+        </div>
+        
+    )
 };
 
-export default admin;
+export default branch;
