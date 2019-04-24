@@ -34,10 +34,20 @@
         flex: 1 1 auto;
         text-align: center;
         padding: 0.8rem 1rem;
+        a{
+            color: rgba(8, 88, 125, 0.7);
+            font-weight: 500;
+        }
         &:hover{
             border-bottom: 2px solid $color-1;
+            color: $color-1;
         }
     }
 }
-.branch-item.active{ border-bottom: 2px solid $color-1; }
-.church-details{ margin-top: 5rem; }
+.branch-item.active{ 
+    border-bottom: 2px solid $color-1;
+    a{
+        color: $color-1;
+    } 
+}
+.church-details, .profile-details{ margin-top: 5rem; }
