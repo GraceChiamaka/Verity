@@ -10,6 +10,7 @@ import Branch from '../Containers/View/Branch/Branch';
 import AdminProfile from '../Containers/View/Admin/AdminProfile';
 import GeneralNetwork from '../Containers/View/Network/GeneralNetwork';
 import Network from '../Containers/View/Network/denominationNetwork';
+import Group from '../Containers/View/Group/Group';
 
 export default () => (
     <BrowserRouter>
@@ -24,6 +25,7 @@ export default () => (
             <Route path="/adminprofile" component={AdminProfile} />
             <Route path="/network" component={GeneralNetwork} />
             <Route path="/denomination" component={Network} />
+            <Route path="/group" component={Group} />
         </div>
     </BrowserRouter>
 );
