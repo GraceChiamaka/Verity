@@ -1,12 +1,8 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
-
 import Header from '../../../Components/Navigation/dashboardHeader';
 import CustomNav from '../../../Components/Navigation/CustomNav/CustomNav';
 import '../Admin/Admin.scss';
 import '../Branch/Branch.scss';
-import user from '../../../assets/images/user_1.png';
-import ChurchLogo from '../../../assets/images/church_logo.png';
 import UserImg from '../../../assets/images/user_2.png';
 import  UserPost from '../../../assets/images/post_1.png';
 import ProfilePic from '../../../assets/images/profile_pic.png';
@@ -26,16 +22,16 @@ const adminprofile = (props) => {
                         <div className="row justify-content-between">
                             <div className="col-lg-3 pos-rel">
                                 <div className="banner-img">
-                                    <img src={ProfilePic} alt='Member profile picture' />
+                                    <img src={ProfilePic} alt="Member profile" />
                                 </div>
                             </div>
                             <div className="col-lg-7">
                                 <ul className="branch-tabs">
                                     <li className="branch-item active f-16 c-brand f-bold">
-                                        <a> Comments <span className="comments-count">(234)</span> </a>
+                                        <button className="btn border-0"> Comments <span className="comments-count">(234)</span> </button>
                                     </li>
                                     <li className="branch-item">
-                                        <a> Likes <span className='likes-count'>(120)</span> </a>
+                                        <button className="btn border-0"> Likes <span className='likes-count'>(120)</span> </button>
                                     </li>
                                 </ul>
                             </div>
@@ -171,7 +167,7 @@ const adminprofile = (props) => {
                                                 Frontier for growth in the development of local expertise in the subsea of oil
                                                 and gas industry and that Brisktrode will play a key role in driving this agenda.
                                             </p>
-                                            <img src={UserPost} className="w-100" alt='user post' />
+                                            <img src={UserPost} className="w-100" alt="user post" />
                                         </div>
                                         <div className=" mt-3 px-3">
                                             <div className="row justify-content-between">
@@ -220,7 +216,7 @@ const adminprofile = (props) => {
                                             <div className="col-lg-7">
                                                 <div className="row">
                                                     <div className="col-lg-3 pr-0">
-                                                        <img src={UserImg} alt='logged in user' />
+                                                        <img src={UserImg} alt="logged in user" />
                                                     </div>
                                                     <div className="col-lg-6 pl-0">
                                                         <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
@@ -244,7 +240,7 @@ const adminprofile = (props) => {
                                                 Frontier for growth in the development of local expertise in the subsea of oil
                                                 and gas industry and that Brisktrode will play a key role in driving this agenda.
                                             </p>
-                                            <img src={UserPost} className="w-100" alt='user post' />
+                                            <img src={UserPost} className="w-100" alt="user post" />
                                         </div>
                                         <div className=" mt-3 px-3">
                                             <div className="row justify-content-between">
@@ -292,7 +288,7 @@ const adminprofile = (props) => {
                                             <div className="col-lg-7">
                                                 <div className="row">
                                                     <div className="col-lg-3 pr-0">
-                                                        <img src={UserImg} alt='logged in user' />
+                                                        <img src={UserImg} alt="logged in user" />
                                                     </div>
                                                     <div className="col-lg-6 pl-0">
                                                         <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
@@ -316,7 +312,7 @@ const adminprofile = (props) => {
                                                 Frontier for growth in the development of local expertise in the subsea of oil
                                                 and gas industry and that Brisktrode will play a key role in driving this agenda.
                                             </p>
-                                            <img src={UserPost} className="w-100" alt='user post' />
+                                            <img src={UserPost} className="w-100" alt="user post" />
                                         </div>
                                         <div className=" mt-3 px-3">
                                             <div className="row justify-content-between">
@@ -365,7 +361,7 @@ const adminprofile = (props) => {
                                             <div className="col-lg-7">
                                                 <div className="row">
                                                     <div className="col-lg-3 pr-0">
-                                                        <img src={UserImg} alt='logged in user' />
+                                                        <img src={UserImg} alt="logged in user" />
                                                     </div>
                                                     <div className="col-lg-6 pl-0">
                                                         <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>

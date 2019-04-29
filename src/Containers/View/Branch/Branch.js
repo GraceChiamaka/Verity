@@ -1,5 +1,4 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
 
 import Header from '../../../Components/Navigation/dashboardHeader';
 import CustomNav from '../../../Components/Navigation/CustomNav/CustomNav';

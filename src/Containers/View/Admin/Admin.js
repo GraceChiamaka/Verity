@@ -1,6 +1,4 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
-
 import Header from '../../../Components/Navigation/dashboardHeader';
 import CustomNav from '../../../Components/Navigation/CustomNav/CustomNav';
 import './Admin.scss';
@@ -333,7 +331,7 @@ const admin = (props) => {
                                             <div className="col-lg-7">
                                                 <div className="row">
                                                     <div className="col-lg-3 pr-0">
-                                                        <img src={UserImg} alt='logged in user' />
+                                                        <img src={UserImg} alt='logged in user profile ' />
                                                     </div>
                                                     <div className="col-lg-6 pl-0">
                                                         <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>

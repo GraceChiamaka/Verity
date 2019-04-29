@@ -8,6 +8,8 @@ import Admin from '../Containers/View/Admin/Admin';
 import User from '../Containers/View/User/User';
 import Branch from '../Containers/View/Branch/Branch';
 import AdminProfile from '../Containers/View/Admin/AdminProfile';
+import GeneralNetwork from '../Containers/View/Network/GeneralNetwork';
+import Network from '../Containers/View/Network/denominationNetwork';
 
 export default () => (
     <BrowserRouter>
@@ -20,6 +22,8 @@ export default () => (
             <Route path="/user" component={User} />
             <Route path="/branch" component={Branch} />
             <Route path="/adminprofile" component={AdminProfile} />
+            <Route path="/network" component={GeneralNetwork} />
+            <Route path="/denomination" component={Network} />
         </div>
     </BrowserRouter>
 );
