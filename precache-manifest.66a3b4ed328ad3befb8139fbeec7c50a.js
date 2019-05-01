@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "https://amriesgrace.github.io/Verity/static/media/bg-locate.e7f32b60.png"
   },
   {
-    "revision": "b3c27c5d4a1fc33c496e",
+    "revision": "eeecf30928d2282023bb",
     "url": "https://amriesgrace.github.io/Verity/static/css/main.68aa2b85.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "https://amriesgrace.github.io/Verity/static/media/church_logo.4d9c2791.png"
   },
   {
-    "revision": "b3c27c5d4a1fc33c496e",
-    "url": "https://amriesgrace.github.io/Verity/static/js/main.e075af42.chunk.js"
+    "revision": "eeecf30928d2282023bb",
+    "url": "https://amriesgrace.github.io/Verity/static/js/main.59a203fe.chunk.js"
   },
   {
     "revision": "9eba57075e4b11a0f9702a37a894e89f",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "https://amriesgrace.github.io/Verity/static/media/Vector.f214eb68.png"
   },
   {
-    "revision": "1f7c5409ebd79481eb23fb3ffc1be5dd",
+    "revision": "594a72d5e1c52feba38e97822d6674e3",
     "url": "https://amriesgrace.github.io/Verity/index.html"
   }
 ];
