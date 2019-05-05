@@ -1,10 +1,11 @@
 import React from 'react';
+
 import Header from '../../../Components/Navigation/dashboardHeader';
 import CustomNav from '../../../Components/Navigation/CustomNav/CustomNav';
 import '../Admin/Admin.scss';
 import '../Branch/Branch.scss';
 import user from '../../../assets/images/user_1.png';
-import ChurchLogo from '../../../assets/images/church_logo.png';
+// import ChurchLogo from '../../../assets/images/church_logo.png';
 import UserImg from '../../../assets/images/user_2.png';
 import  UserPost from '../../../assets/images/post_1.png';
 import ProfilePic from '../../../assets/images/profile_pic.png';
@@ -508,7 +509,7 @@ const network = (props) => {
 			                                
 			                            </section>
 									</div>
-		                        </div>   
+		                        </div>
 		                    </div>
 		                </div>
 					</div>

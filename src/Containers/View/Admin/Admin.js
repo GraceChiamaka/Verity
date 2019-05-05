@@ -6,6 +6,7 @@ import './Admin.scss';
 import user from '../../../assets/images/user_1.png';
 import ChurchLogo from '../../../assets/images/church_logo.png';
 import UserImg from '../../../assets/images/user_2.png';
+import UserIcon from '../../../assets/images/user_3.png';
 import  UserPost from '../../../assets/images/post_1.png';
 
 const admin = (props) => {
@@ -159,7 +160,7 @@ const admin = (props) => {
                                         <div className="comment-box mt-4">
                                             <div className="row">
                                                 <div className="col-lg-1 pr-0">
-                                                    <img src={UserImg} className="w-75" />
+                                                    <img src={UserIcon} className="img-fluid" />
                                                    
                                                 </div>
                                                 <div className="col-lg-11 pl-0">
@@ -232,7 +233,7 @@ const admin = (props) => {
                                         <div className="comment-box mt-4">
                                             <div className="row">
                                                 <div className="col-lg-1 pr-0">
-                                                    <img src={UserImg} className="w-75" />
+                                                    <img src={UserIcon} className="img-fluid" />
                                                    
                                                 </div>
                                                 <div className="col-lg-11 pl-0">
@@ -304,7 +305,7 @@ const admin = (props) => {
                                         <div className="comment-box mt-4">
                                             <div className="row">
                                                 <div className="col-lg-1 pr-0">
-                                                    <img src={UserImg} className="w-75" />
+                                                    <img src={UserIcon} className="img-fluid" />
                                                    
                                                 </div>
                                                 <div className="col-lg-11 pl-0">
@@ -376,7 +377,7 @@ const admin = (props) => {
                                         <div className="comment-box mt-4">
                                             <div className="row">
                                                 <div className="col-lg-1 pr-0">
-                                                    <img src={UserImg} className="w-75" />
+                                                    <img src={UserIcon} className="img-fluid" />
                                                    
                                                 </div>
                                                 <div className="col-lg-11 pl-0">

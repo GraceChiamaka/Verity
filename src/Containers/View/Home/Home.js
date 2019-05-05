@@ -13,6 +13,7 @@ class Home extends Component {
     state ={
         showModal: false,
         showNextModal: false,
+        showMinimizedNavbar: false,
     }
     showModal = (ev) => {
         console.log(ev.target);
@@ -30,11 +31,13 @@ class Home extends Component {
         })
     }
 
+
+
     render(){
         return (
             <Aux>
                 <div className="Home">
-                    <Header />
+                    <Header showResponsiveNavbar={this.showMinNavbar} navbarState={this.state.showMinNavbar} />
                     <main className="mt-6e mb-6e">
                         <div className="intro">
                             <h3 className="f-20 c-red text-center f-bold">Verity Christian Faith Ministry</h3>
@@ -51,8 +54,8 @@ class Home extends Component {
                         </div>
                         <div className="info text-center"> 
                         {
-                            this.state.showModal ? 
-                            <Modal show={this.showSquareModal} hide={this.hideModal}>
+                            this.state.showModal && 
+                            <Modal show={this.showModal} hide={this.hideModal}>
                                 <div className="modal-content">
                                     <h3 className='text-center c-brand f-bold'>Welcome to the church organisation Platform</h3>
                                     <p className="text-center f-20 c-brown f-med">Please select an option for you to enter</p>
@@ -72,16 +75,16 @@ class Home extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group mt-5 text-center">
-                                            <button type='submit' className="btn btn-brand text-white" >Select</button>
+                                            <button type='submit' className="btn btn-brand text-white" onClick={this.showNextModal}>Select</button>
                                         </div>
                                     </form>                        
                                 </div>
                             </Modal>
-                            : null
+                            
                         }
                         {
-                            this.state.showNextModal ?
-                            <Modal>
+                            this.state.showNextModal &&
+                            <Modal show={this.showNextModal}>
                                 <div className="modal-content">
                                 <h3 className='text-center c-brand f-bold'>Welcome to the church organisation Platform</h3>
                                 <p className="text-center f-20 c-brown f-med">Please select an option for you to enter</p>
@@ -101,12 +104,12 @@ class Home extends Component {
                                         </div>
                                     </div>
                                     <div className="form-group mt-5 text-center">
-                                        <button type='submit' className="btn btn-brand text-white" onClick={this.showNextModal}>Select</button>
+                                        <button type='submit' className="btn btn-brand text-white">Select</button>
                                     </div>
                                 </form>                        
                                 </div>
                             </Modal>
-                            : null
+                            
                         }
                             
                             <Square>

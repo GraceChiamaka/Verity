@@ -45,7 +45,7 @@ const register = (props) => {
                                         <button className="SignUp-btn">Sign Up</button>
                                     </div>
                                     <div className="form-group mt-3 mb-5 text-center">
-                                        <p>Already Have an Account? <Link to="/login" className="c-red">Login</Link> </p>
+                                        <p>Already Have an Account? <Link to= "/login" className="c-red">Login</Link> </p>
                                     </div>
                                 </form>
                             </div>

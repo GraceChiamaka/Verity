@@ -1,4 +1,6 @@
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
 .DashboardHeader{
     border: 1px solid rgba(8, 88, 125, 0.6);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -29,6 +31,9 @@
     border: 1px solid #c4c4c4;
     border-radius: 50%;
     padding: 5px;
+    @include screenSize(ss-phone){
+        width: 50px;
+    }
 
 }
 .navbar-nav{
@@ -47,4 +52,8 @@
     position: absolute;
     bottom: 20%;
     right: 0;
+    @include screenSize(ss-phone){
+        left: 9%;
+        bottom: 0;
+    }
 }
