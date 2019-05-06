@@ -1,6 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Nav, Navbar, NavItem, Button, Form, FormControl, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 import Aux from '../../hoc/hoc';
 import '../../assets/scss/_base.scss';
@@ -37,9 +36,9 @@ const dashboardHeader = (props) => {
                                 </Navbar.Brand>
                             </Nav>
                             <Nav className="ml-auto header-link ">
-                                <form class="form-inline my-2 my-lg-0 mr-2">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search verity" aria-label="Search" />
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                <form className="form-inline my-2 my-lg-0 mr-2">
+                                    <input className="form-control mr-sm-2" type="search" placeholder="Search verity" aria-label="Search" />
+                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                 </form>
                                 <img src={UserPhoto} className="user-img img-fluid" alt="user" />
                                 <span className="blue-dot"></span>

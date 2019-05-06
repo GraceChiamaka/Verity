@@ -24,6 +24,11 @@
           @content;
       }
     }
+    @else if $size = xs-phone{
+      @media(max-width: 375px){
+        @content;
+      }
+    }
     @else if $size == tab-phone {
       @media (min-width: 576px) and (max-width: 1199px)  {
           @content;

@@ -1,4 +1,6 @@
 @import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
 .Admin, .User, .Branch, .AdminProfile, .GeneralNetwork, .Group{
     background:rgba(224, 224, 224, 0.5);
     padding-bottom: 4rem;
@@ -18,6 +20,13 @@
         position: absolute;
         left: 37%;
         top: 40%;
+        @include screenSize(tablet){
+            left: 25%;
+        }
+        @include screenSize(ss-phone){
+            left: 40%;
+        }
+
     }
     .user-details{ margin-top: 3rem; }
 }
@@ -80,6 +89,22 @@ input.form-control{
     padding-left: 10px;
     font-size: 12px;
 }
+.tag-friends{
+    @include screenSize(ss-phone){
+        margin-left: 7px !important;
+    }
+   
+}
+.btn-upload, .tag-friends{
+    @include screenSize(tablet){
+        margin-left: 0px !important;
+        margin-top: 7px;
+    }
+     @include screenSize(xs-phone){
+        margin-left: 0px !important;
+        margin-top: 7px;
+    }
+}
 .comment-box{
     .input-group{
         .form-control{
@@ -89,5 +114,14 @@ input.form-control{
         .input-group-text{
             background: rgba(224, 224, 224, 0.3);
         }
+    }
+}
+.post-likes, .post-comment{
+    @include screenSize(tablet){
+        font-size:12px;
+    }
+    @include screenSize(xs-phone){
+        font-size: 12px;
+        margin-right: 10px !important;
     }
 }

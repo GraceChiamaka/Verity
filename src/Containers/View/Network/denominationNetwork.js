@@ -4,10 +4,9 @@ import CustomNav from '../../../Components/Navigation/CustomNav/CustomNav';
 import '../Admin/Admin.scss';
 import '../Branch/Branch.scss';
 import user from '../../../assets/images/user_1.png';
-import ChurchLogo from '../../../assets/images/church_logo.png';
 import UserImg from '../../../assets/images/user_2.png';
+import UserIcon from '../../../assets/images/user_3.png';
 import  UserPost from '../../../assets/images/post_1.png';
-import ProfilePic from '../../../assets/images/profile_pic.png';
 import redeemgroup from '../../../assets/images/group-4.png';
 import club from '../../../assets/images/group-2.png';
 import youth from '../../../assets/images/group-1.png';
@@ -27,16 +26,16 @@ const denomination = (props) => {
 		                            <div className="col-lg-7 pos-rel">
 		                                 <ul className="new-tabs">
 		                                    <li className="new-tabs-item  f-16 c-brand f-bold">
-		                                        <a> General  </a>
+		                                        <a href="/network"> General  </a>
 		                                    </li>
 		                                    <li className="new-tabs-item active f-16 f-bold text-capitalize">
-		                                        <a> denomination </a>
+		                                        <a href="/denomination"> denomination </a>
 		                                    </li>
 		                                </ul>
 		                            </div>
 		                        </div>
 		                        <div className="row justify-content-bewteen mt-5">
-									<div className="col-lg-3">
+									<div className="col-md-3 col-lg-3">
 										<div className="bd-grey bg-white">
 			                                <div className="user-section">
 			                                    <div className="network-block"></div>
@@ -77,12 +76,12 @@ const denomination = (props) => {
 			                            	</p>
 			                            </div>
 									</div>
-									<div className="col-lg-6">
+									<div className="col-md-6 col-lg-6">
 										<section className="posts">
 			                                <section className="create-post p-3">
-			                                    <div class="media">
-			                                        <img src={UserImg} class="mr-3" alt="logged in user" />
-			                                        <div class="media-body">
+			                                    <div className="media">
+			                                        <img src={UserImg} className="mr-3" alt="logged in user" />
+			                                        <div className="media-body">
 			                                            <input type="text" className="create-post-input f-14 f-bold" placeholder='Create a post...' />
 			                                            <div className="uploads mt-3">
 			                                                <input type="file" className="upload-input" />
@@ -98,364 +97,364 @@ const denomination = (props) => {
 			                                        </div>
 			                                    </div>
 			                                </section>
-			                                <section className='old-post bg-white border p-4'>
-			                                    <div className="post-header">
-			                                        <div className="row justify-content-between">
-			                                            <div className="col-lg-7">
-			                                                <div className="row">
-			                                                    <div className="col-lg-3 pr-0">
-			                                                        <img src={UserImg} alt='logged in user' />
-			                                                    </div>
-			                                                    <div className="col-lg-6 pl-0">
-			                                                        <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
-			                                                        <p className="c-grey f-12 f-med">4 hrs Ago</p>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                            </div>
-			                                            <div className="col-lg-3">
-			                                                <button className="btn bg-transparent border-0 pull-right">
-			                                                    <i className="fa fa-ellipsis-h f-16 c-blue"></i>
-			                                                </button>
-			                                            </div>
-			                                        </div>
-			                                        <div className="mt-4">
-			                                            <p className=" f-12 f-med">
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                            </p>
-			                                            <img src={UserPost} className="w-100" alt='user post' />
-			                                        </div>
-			                                        <div className=" mt-3 px-3">
-			                                            <div className="row justify-content-between">
-			                                                <div className="col-lg-6">
-			                                                    <span className="post-likes c-blue f-14 mr-3 f-bold">
-			                                                        <i className="fa fa-heart-o mr-2"></i>
-			                                                        20 likes
-			                                                    </span> 
-			                                                    <span className="post-comment c-blue f-14 f-bold">
-			                                                        <i className="fa fa-comment-o mr-2"></i>
-			                                                        12 comments
-			                                                    </span>
-			                                                </div>
-			                                                <div className="col-lg-3">
-			                                                    <i className="fa fa-bookmark c-blue pull-right"></i>
-			                                                </div>
-			                                            </div>
-			                                        </div>
-			                                        <div className="comment-box mt-4">
-			                                            <div className="row">
-			                                                <div className="col-lg-1 pr-0">
-			                                                    <img src={UserImg} className="w-75" />
-			                                                   
-			                                                </div>
-			                                                <div className="col-lg-11 pl-0">
-			                                                     <div class="input-group mb-3">
-			                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
-			                                                            aria-label="Comment..." aria-describedby="basic-addon2" />
-			                                                        <div class="input-group-append">
-			                                                            <span class="input-group-text border-left-0" id="basic-addon2">
-			                                                                <i className="fa fa-image c-blue"></i>
-			                                                            </span>
-			                                                        </div>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                                
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </section>
+											<section className='old-post bg-white border p-4'>
+												<div className="post-header">
+													<div className="row justify-content-between">
+														<div className="col-9 col-md-7 col-lg-7">
+															<div className="row">
+																<div className="col-4 col-md-3 col-lg-3 pr-0">
+																	<img src={UserImg} className="img-fluid " alt='logged in user' />
+																</div>
+																<div className="col-7 col-md-9 col-lg-6 pl-0">
+																	<p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
+																	<p className="c-grey f-12 f-med">4 hrs Ago</p>
+																</div>
+															</div>
+															
+														</div>
+														<div className="col-3 col-md-2 col-lg-3">
+															<button className="btn bg-transparent border-0 pull-right">
+																<i className="fa fa-ellipsis-h f-16 c-blue"></i>
+															</button>
+														</div>
+													</div>
+													<div className="mt-4">
+														<p className=" f-12 f-med">
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+														</p>
+														<img src={UserPost} className="w-100" alt='user post' />
+													</div>
+													<div className=" mt-3 px-3">
+														<div className="row justify-content-between">
+															<div className="col-9 col-lg-6">
+																<span className="post-likes c-blue f-14 mr-3 f-bold">
+																	<i className="fa fa-heart-o mr-2"></i>
+																	20 likes
+																</span> 
+																<span className="post-comment c-blue f-14 f-bold">
+																	<i className="fa fa-comment-o mr-2"></i>
+																	12 comments
+																</span>
+															</div>
+															<div className="col-3 col-lg-3">
+																<i className="fa fa-bookmark c-blue pull-right"></i>
+															</div>
+														</div>
+													</div>
+													<div className="comment-box mt-4">
+														<div className="row">
+															<div className="col-2 col-md-2 pr-0">
+																<img src={UserIcon} className="img-fluid" alt="" />
+															
+															</div>
+															<div className="col-10 col-md-10 pl-0">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control border-right-0" placeholder="Comment..." 
+																		aria-label="Comment..." aria-describedby="basic-addon2" />
+																	<div class="input-group-append">
+																		<span class="input-group-text border-left-0" id="basic-addon2">
+																			<i className="fa fa-image c-blue"></i>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															
+															
+														</div>
+													</div>
+												</div>
+											</section>
 
-			                                <section className='old-post bg-white border p-4 mt-3'>
-			                                    <div className="post-header">
-			                                        <div className="row justify-content-between">
-			                                            <div className="col-lg-7">
-			                                                <div className="row">
-			                                                    <div className="col-lg-3 pr-0">
-			                                                        <img src={UserImg} alt='logged in user' />
-			                                                    </div>
-			                                                    <div className="col-lg-6 pl-0">
-			                                                        <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
-			                                                        <p className="c-grey f-12 f-med">4 hrs Ago</p>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                            </div>
-			                                            <div className="col-lg-3">
-			                                                <button className="btn bg-transparent border-0 pull-right">
-			                                                    <i className="fa fa-ellipsis-h f-16 c-blue"></i>
-			                                                </button>
-			                                            </div>
-			                                        </div>
-			                                        <div className="mt-4">
-			                                            <p className=" f-12 f-med">
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                            </p>
-			                                            <img src={UserPost} className="w-100" alt='user post' />
-			                                        </div>
-			                                        <div className=" mt-3 px-3">
-			                                            <div className="row justify-content-between">
-			                                                <div className="col-lg-6">
-			                                                    <span className="post-likes c-blue f-14 mr-3 f-bold">
-			                                                        <i className="fa fa-heart-o mr-2"></i>
-			                                                        20 likes
-			                                                    </span> 
-			                                                    <span className="post-comment c-blue f-14 f-bold">
-			                                                        <i className="fa fa-comment-o mr-2"></i>
-			                                                        12 comments
-			                                                    </span>
-			                                                </div>
-			                                                <div className="col-lg-3">
-			                                                    <i className="fa fa-bookmark c-blue pull-right"></i>
-			                                                </div>
-			                                            </div>
-			                                        </div>
-			                                        <div className="comment-box mt-4">
-			                                            <div className="row">
-			                                                <div className="col-lg-1 pr-0">
-			                                                    <img src={UserImg} className="w-75" />
-			                                                   
-			                                                </div>
-			                                                <div className="col-lg-11 pl-0">
-			                                                     <div class="input-group mb-3">
-			                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
-			                                                            aria-label="Comment..." aria-describedby="basic-addon2" />
-			                                                        <div class="input-group-append">
-			                                                            <span class="input-group-text border-left-0" id="basic-addon2">
-			                                                                <i className="fa fa-image c-blue"></i>
-			                                                            </span>
-			                                                        </div>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                                
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </section>
-			                                <section className='old-post bg-white border p-4 mt-3'>
-			                                    <div className="post-header">
-			                                        <div className="row justify-content-between">
-			                                            <div className="col-lg-7">
-			                                                <div className="row">
-			                                                    <div className="col-lg-3 pr-0">
-			                                                        <img src={UserImg} alt='logged in user' />
-			                                                    </div>
-			                                                    <div className="col-lg-6 pl-0">
-			                                                        <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
-			                                                        <p className="c-grey f-12 f-med">4 hrs Ago</p>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                            </div>
-			                                            <div className="col-lg-3">
-			                                                <button className="btn bg-transparent border-0 pull-right">
-			                                                    <i className="fa fa-ellipsis-h f-16 c-blue"></i>
-			                                                </button>
-			                                            </div>
-			                                        </div>
-			                                        <div className="mt-4">
-			                                            <p className=" f-12 f-med">
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                            </p>
-			                                            <img src={UserPost} className="w-100" alt='user post' />
-			                                        </div>
-			                                        <div className=" mt-3 px-3">
-			                                            <div className="row justify-content-between">
-			                                                <div className="col-lg-6">
-			                                                    <span className="post-likes c-blue f-14 mr-3 f-bold">
-			                                                        <i className="fa fa-heart-o mr-2"></i>
-			                                                        20 likes
-			                                                    </span> 
-			                                                    <span className="post-comment c-blue f-14 f-bold">
-			                                                        <i className="fa fa-comment-o mr-2"></i>
-			                                                        12 comments
-			                                                    </span>
-			                                                </div>
-			                                                <div className="col-lg-3">
-			                                                    <i className="fa fa-bookmark c-blue pull-right"></i>
-			                                                </div>
-			                                            </div>
-			                                        </div>
-			                                        <div className="comment-box mt-4">
-			                                            <div className="row">
-			                                                <div className="col-lg-1 pr-0">
-			                                                    <img src={UserImg} className="w-75" />
-			                                                   
-			                                                </div>
-			                                                <div className="col-lg-11 pl-0">
-			                                                     <div class="input-group mb-3">
-			                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
-			                                                            aria-label="Comment..." aria-describedby="basic-addon2" />
-			                                                        <div class="input-group-append">
-			                                                            <span class="input-group-text border-left-0" id="basic-addon2">
-			                                                                <i className="fa fa-image c-blue"></i>
-			                                                            </span>
-			                                                        </div>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                                
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </section>
+											<section className='old-post bg-white border p-4'>
+												<div className="post-header">
+													<div className="row justify-content-between">
+														<div className="col-9 col-md-7 col-lg-7">
+															<div className="row">
+																<div className="col-4 col-md-3 col-lg-3 pr-0">
+																	<img src={UserImg} className="img-fluid " alt='logged in user' />
+																</div>
+																<div className="col-7 col-md-9 col-lg-6 pl-0">
+																	<p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
+																	<p className="c-grey f-12 f-med">4 hrs Ago</p>
+																</div>
+															</div>
+															
+														</div>
+														<div className="col-3 col-md-2 col-lg-3">
+															<button className="btn bg-transparent border-0 pull-right">
+																<i className="fa fa-ellipsis-h f-16 c-blue"></i>
+															</button>
+														</div>
+													</div>
+													<div className="mt-4">
+														<p className=" f-12 f-med">
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+														</p>
+														<img src={UserPost} className="w-100" alt='user post' />
+													</div>
+													<div className=" mt-3 px-3">
+														<div className="row justify-content-between">
+															<div className="col-9 col-lg-6">
+																<span className="post-likes c-blue f-14 mr-3 f-bold">
+																	<i className="fa fa-heart-o mr-2"></i>
+																	20 likes
+																</span> 
+																<span className="post-comment c-blue f-14 f-bold">
+																	<i className="fa fa-comment-o mr-2"></i>
+																	12 comments
+																</span>
+															</div>
+															<div className="col-3 col-lg-3">
+																<i className="fa fa-bookmark c-blue pull-right"></i>
+															</div>
+														</div>
+													</div>
+													<div className="comment-box mt-4">
+														<div className="row">
+															<div className="col-2 col-md-2 pr-0">
+																<img src={UserIcon} className="img-fluid" alt="" />
+															
+															</div>
+															<div className="col-10 col-md-10 pl-0">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control border-right-0" placeholder="Comment..." 
+																		aria-label="Comment..." aria-describedby="basic-addon2" />
+																	<div class="input-group-append">
+																		<span class="input-group-text border-left-0" id="basic-addon2">
+																			<i className="fa fa-image c-blue"></i>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															
+															
+														</div>
+													</div>
+												</div>
+											</section>
 
-			                                <section className='old-post bg-white border p-4 mt-4'>
-			                                    <div className="post-header">
-			                                        <div className="row justify-content-between">
-			                                            <div className="col-lg-7">
-			                                                <div className="row">
-			                                                    <div className="col-lg-3 pr-0">
-			                                                        <img src={UserImg} alt='logged in user' />
-			                                                    </div>
-			                                                    <div className="col-lg-6 pl-0">
-			                                                        <p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
-			                                                        <p className="c-grey f-12 f-med">4 hrs Ago</p>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                            </div>
-			                                            <div className="col-lg-3">
-			                                                <button className="btn bg-transparent border-0 pull-right">
-			                                                    <i className="fa fa-ellipsis-h f-16 c-blue"></i>
-			                                                </button>
-			                                            </div>
-			                                        </div>
-			                                        <div className="mt-4">
-			                                            <p className=" f-12 f-med">
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                                Frontier for growth in the development of local expertise in the subsea of oil
-			                                                and gas industry and that Brisktrode will play a key role in driving this agenda.
-			                                            </p>
-			                                        </div>
-			                                        <div className=" mt-3 px-3">
-			                                            <div className="row justify-content-between">
-			                                                <div className="col-lg-6">
-			                                                    <span className="post-likes c-blue f-14 mr-3 f-bold">
-			                                                        <i className="fa fa-heart-o mr-2"></i>
-			                                                        20 likes
-			                                                    </span> 
-			                                                    <span className="post-comment c-blue f-14 f-bold">
-			                                                        <i className="fa fa-comment-o mr-2"></i>
-			                                                        12 comments
-			                                                    </span>
-			                                                </div>
-			                                                <div className="col-lg-3">
-			                                                    <i className="fa fa-bookmark c-blue pull-right"></i>
-			                                                </div>
-			                                            </div>
-			                                        </div>
-			                                        <div className="comment-box mt-4">
-			                                            <div className="row">
-			                                                <div className="col-lg-1 pr-0">
-			                                                    <img src={UserImg} className="w-75" />
-			                                                   
-			                                                </div>
-			                                                <div className="col-lg-11 pl-0">
-			                                                     <div class="input-group mb-3">
-			                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
-			                                                            aria-label="Comment..." aria-describedby="basic-addon2" />
-			                                                        <div class="input-group-append">
-			                                                            <span class="input-group-text border-left-0" id="basic-addon2">
-			                                                                <i className="fa fa-image c-blue"></i>
-			                                                            </span>
-			                                                        </div>
-			                                                    </div>
-			                                                </div>
-			                                                
-			                                                
-			                                            </div>
-			                                        </div>
-			                                    </div>
-			                                </section>
+											<section className='old-post bg-white border p-4'>
+												<div className="post-header">
+													<div className="row justify-content-between">
+														<div className="col-9 col-md-7 col-lg-7">
+															<div className="row">
+																<div className="col-4 col-md-3 col-lg-3 pr-0">
+																	<img src={UserImg} className="img-fluid " alt='logged in user' />
+																</div>
+																<div className="col-7 col-md-9 col-lg-6 pl-0">
+																	<p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
+																	<p className="c-grey f-12 f-med">4 hrs Ago</p>
+																</div>
+															</div>
+															
+														</div>
+														<div className="col-3 col-md-2 col-lg-3">
+															<button className="btn bg-transparent border-0 pull-right">
+																<i className="fa fa-ellipsis-h f-16 c-blue"></i>
+															</button>
+														</div>
+													</div>
+													<div className="mt-4">
+														<p className=" f-12 f-med">
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+														</p>
+														<img src={UserPost} className="w-100" alt='user post' />
+													</div>
+													<div className=" mt-3 px-3">
+														<div className="row justify-content-between">
+															<div className="col-9 col-lg-6">
+																<span className="post-likes c-blue f-14 mr-3 f-bold">
+																	<i className="fa fa-heart-o mr-2"></i>
+																	20 likes
+																</span> 
+																<span className="post-comment c-blue f-14 f-bold">
+																	<i className="fa fa-comment-o mr-2"></i>
+																	12 comments
+																</span>
+															</div>
+															<div className="col-3 col-lg-3">
+																<i className="fa fa-bookmark c-blue pull-right"></i>
+															</div>
+														</div>
+													</div>
+													<div className="comment-box mt-4">
+														<div className="row">
+															<div className="col-2 col-md-2 pr-0">
+																<img src={UserIcon} className="img-fluid" alt="" />
+															
+															</div>
+															<div className="col-10 col-md-10 pl-0">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control border-right-0" placeholder="Comment..." 
+																		aria-label="Comment..." aria-describedby="basic-addon2" />
+																	<div class="input-group-append">
+																		<span class="input-group-text border-left-0" id="basic-addon2">
+																			<i className="fa fa-image c-blue"></i>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															
+															
+														</div>
+													</div>
+												</div>
+											</section>
+
+											<section className='old-post bg-white border p-4'>
+												<div className="post-header">
+													<div className="row justify-content-between">
+														<div className="col-9 col-md-7 col-lg-7">
+															<div className="row">
+																<div className="col-4 col-md-3 col-lg-3 pr-0">
+																	<img src={UserImg} className="img-fluid " alt='logged in user' />
+																</div>
+																<div className="col-7 col-md-9 col-lg-6 pl-0">
+																	<p className='c-brand f-14 f-bold mb-0'>David Akinbami</p>
+																	<p className="c-grey f-12 f-med">4 hrs Ago</p>
+																</div>
+															</div>
+															
+														</div>
+														<div className="col-3 col-md-2 col-lg-3">
+															<button className="btn bg-transparent border-0 pull-right">
+																<i className="fa fa-ellipsis-h f-16 c-blue"></i>
+															</button>
+														</div>
+													</div>
+													<div className="mt-4">
+														<p className=" f-12 f-med">
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+															Frontier for growth in the development of local expertise in the subsea of oil
+															and gas industry and that Brisktrode will play a key role in driving this agenda.
+														</p>
+													</div>
+													<div className=" mt-3 px-3">
+														<div className="row justify-content-between">
+															<div className="col-9 col-lg-6">
+																<span className="post-likes c-blue f-14 mr-3 f-bold">
+																	<i className="fa fa-heart-o mr-2"></i>
+																	20 likes
+																</span> 
+																<span className="post-comment c-blue f-14 f-bold">
+																	<i className="fa fa-comment-o mr-2"></i>
+																	12 comments
+																</span>
+															</div>
+															<div className="col-3 col-lg-3">
+																<i className="fa fa-bookmark c-blue pull-right"></i>
+															</div>
+														</div>
+													</div>
+													<div className="comment-box mt-4">
+														<div className="row">
+															<div className="col-2 col-md-2 pr-0">
+																<img src={UserIcon} className="img-fluid" alt="" />
+															
+															</div>
+															<div className="col-10 col-md-10 pl-0">
+																<div class="input-group mb-3">
+																	<input type="text" class="form-control border-right-0" placeholder="Comment..." 
+																		aria-label="Comment..." aria-describedby="basic-addon2" />
+																	<div class="input-group-append">
+																		<span class="input-group-text border-left-0" id="basic-addon2">
+																			<i className="fa fa-image c-blue"></i>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															
+															
+														</div>
+													</div>
+												</div>
+											</section>    
 			                            </section> 
+										
 									</div>
-									<div className="col-lg-3">
+									<div className="col-md-3 col-lg-3">
 										<section className="friend-suggestions bg-white p-2">
-			                            	<h3 className="c-brown f-16">
-			                            		People you may know
-			                            	</h3>
-			                            	<div className="row mt-3">
-			                            		<div className="col-lg-3">
-			                            			<img src={UserImg} className="w-40" alt="user" />
-			                            		</div>
-			                            		<div className="col-lg-6 px-0">
-			                            			<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
-			                            			<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
-			                            		</div>
-			                            		<div className="col-lg-3  px-0">
-			                            			<p className="c-brand f-14 f-med">Follow</p>
-			                            		</div>
-			                            	</div>
+											<h3 className="c-brown f-16">
+												People you may know
+											</h3>
+											<div className="row mt-3">
+												<div className="col-12 col-lg-3">
+													<img src={UserImg} className="w-40" alt="user" />
+												</div>
+												<div className="col-12 col-lg-6 px-0">
+													<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
+													<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
+												</div>
+												<div className="col-12 col-lg-3  px-0">
+													<p className="c-brand f-14 f-med">Follow</p>
+												</div>
+											</div>
 
-			                            	<div className="row mt-3">
-			                            		<div className="col-lg-3">
-			                            			<img src={UserImg} className="w-40" alt="user" />
-			                            		</div>
-			                            		<div className="col-lg-6 px-0">
-			                            			<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
-			                            			<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
-			                            		</div>
-			                            		<div className="col-lg-3  px-0">
-			                            			<p className="c-brand f-14 f-med">Follow</p>
-			                            		</div>
-			                            	</div>
+											<div className="row mt-3">
+												<div className="col-lg-3">
+													<img src={UserImg} className="w-40" alt="user" />
+												</div>
+												<div className="col-lg-6 px-0">
+													<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
+													<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
+												</div>
+												<div className=" col-lg-3  px-0">
+													<p className="c-brand f-14 f-med">Follow</p>
+												</div>
+											</div>
 
-			                            	<div className="row mt-3">
-			                            		<div className="col-lg-3">
-			                            			<img src={UserImg} className="w-40" alt="user" />
-			                            		</div>
-			                            		<div className="col-lg-6 px-0">
-			                            			<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
-			                            			<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
-			                            		</div>
-			                            		<div className="col-lg-3  px-0">
-			                            			<p className="c-brand f-14 f-med">Follow</p>
-			                            		</div>
-			                            	</div>
-
-			                            	<div className="row mt-3">
-			                            		<div className="col-lg-3">
-			                            			<img src={UserImg} className="w-40" alt="user" />
-			                            		</div>
-			                            		<div className="col-lg-6 px-0">
-			                            			<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
-			                            			<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
-			                            		</div>
-			                            		<div className="col-lg-3  px-0">
-			                            			<p className="c-brand f-14 f-med">Follow</p>
-			                            		</div>
-			                            	</div>
-
-			                            	<div className="text-center c-brand f-med mt-3 mb-3">
+											<div className="row mt-3">
+												<div className="col-lg-3">
+													<img src={UserImg} className="w-40" alt="user" />
+												</div>
+												<div className="col-lg-6 px-0">
+													<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
+													<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
+												</div>
+												<div className=" col-lg-3  px-0">
+													<p className="c-brand f-14 f-med">Follow</p>
+												</div>
+											</div>
+											<div className="row mt-3">
+												<div className="col-lg-3">
+													<img src={UserImg} className="w-40" alt="user" />
+												</div>
+												<div className="col-lg-6 px-0">
+													<p className="f-12 f-med c-brand mb-0">David Akinbami</p>
+													<span className="f-10 f-med c-grey">Deeper Life Bible Church</span>
+												</div>
+												<div className=" col-lg-3  px-0">
+													<p className="c-brand f-14 f-med">Follow</p>
+												</div>
+											</div>
+											<div className="text-center c-brand f-med mt-3 mb-3">
 												View all
-			                            	</div>
-			                            </section>
+											</div>
+										</section>
 			                            <section className="group-suggestions mt-3 bg-white p-3">
 
 			                                <h3 className="f-16">Groups you may like to join</h3>
 
 			                                <div className="row mt-3">
-			                            		<div className="col-lg-3">
+			                            		<div className=" col-lg-3">
 			                            			<img src={redeemgroup} className="w-40" alt="user" />
 			                            		</div>
 			                            		<div className="col-lg-6 px-0">

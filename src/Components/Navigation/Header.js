@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Nav, Navbar, NavItem, Button, Form, FormControl, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar }from 'react-bootstrap';
+
 import Aux from '../../hoc/hoc';
 import Logo from '../../assets/images/s4.png'
 import './Header.scss';
