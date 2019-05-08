@@ -112,7 +112,7 @@ input.form-control{
             background: rgba(224, 224, 224, 0.3);
         }
         .input-group-text{
-            background: rgba(224, 224, 224, 0.3);
+            background: rgba(224, 224, 224, 0.3);   
         }
     }
 }
@@ -124,4 +124,11 @@ input.form-control{
         font-size: 12px;
         margin-right: 10px !important;
     }
+}
+
+.message-form-control{
+    border: none;
+    height: 400px;
+    width: 100%;
+    padding-left: 10px;
 }

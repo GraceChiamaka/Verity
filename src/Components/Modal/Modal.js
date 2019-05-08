@@ -7,7 +7,7 @@ const modal = (props) => {
     return (
         <Aux>
             <Backdrop hide={props.hide} />
-            <div className="Modal">
+            <div className={"Modal "+(props.className || '')}>
                 {props.children}
             </div>
         </Aux>

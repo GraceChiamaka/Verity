@@ -1,4 +1,5 @@
-
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
 .Home{
     background-image:url('../../../assets/images/Vector.png');
     background-repeat: no-repeat;
@@ -28,3 +29,83 @@
     }
 }
 .mr-5e{ margin-right: 5rem; }
+
+.hidden-close{ display:none; }
+
+.church-bg{
+    width: 100%;
+    background: $color-3;
+    background-image: url('../../../assets/images/church-icon.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+.modal-sm{
+    width: 556px;
+    height: 312px;
+}
+.onboarding-form{
+    .form-control{
+        border:none !important;
+        border-bottom: 0.5px solid rgba(79, 79, 79, 0.6) !important;
+        background: #fff !important;
+        border-radius: 0px;
+        &:focus{
+            border: none !important;
+            border-bottom: 1px solid $color-1 !important;
+            outline-color: none  !important;
+            box-shadow: none !important;
+        }
+    }
+    textarea.form-control{
+        border: 0.5px solid rgba(79, 79, 79, 0.6) !important;
+        border-radius: 0px;
+        height: 130px;
+        &:focus{
+            border: 0.5px solid rgba(79, 79, 79, 0.6) !important;
+        }
+    }
+}
+@include screenSize(tablet){
+    .form-check-inline{
+        display: block;
+        text-align: left;
+        margin: auto;
+        margin-left: 2em;
+        margin-bottom: 10px;
+    }
+    .hidden-close{
+        display: none;
+    }
+    .church-bg{
+        display: block;
+    }
+}
+@include screenSize(ss-phone){
+    .form-check-inline{
+        display: block;
+        text-align: left;
+        margin: auto;
+        margin-left: 2em;
+        margin-bottom: 10px;
+    }
+    .hidden-close{ display: block;}
+    .church-bg{
+        display: none;
+    }
+}
+
+@include screenSize(xs-phone){
+    .form-check-inline{
+        display: block;
+        text-align: left;
+        margin: auto;
+        margin-left: 2em;
+        margin-bottom: 10px;
+    }
+    .hidden-close{ display: block; }
+    .church-bg{
+        display: none;
+    }
+}

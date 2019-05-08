@@ -1,4 +1,5 @@
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .Square-container{
     width: 210px;
@@ -35,3 +36,17 @@
     }
 }
 .mb-5e{ margin-bottom: 5rem !important; }
+@include screenSize(ss-phone){
+    .Square-container{
+        width: 180px;
+        height: 180px;
+        margin-right: 1.5rem;
+        .Square{
+            width: 140px;
+            height: 140px;
+            margin: 18px auto; 
+            padding-top: 2.5rem;
+        }
+    }
+    
+}
