@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://amriesgrace.github.io/Verity/precache-manifest.ca499116fcc1671d1f5f7bf4c3b1f8c2.js"
+  "/Verity/precache-manifest.eb9b6fb580c30ba6556ac4a0cb558c03.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("https://amriesgrace.github.io/Verity/index.html", {
+workbox.routing.registerNavigationRoute("/Verity/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
