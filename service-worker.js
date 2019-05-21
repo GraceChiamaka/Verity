@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://amriesgrace.github.io/Verity/precache-manifest.3709b3b27c3f8812885576d0db660c0d.js"
+  "https://amriesgrace.github.io/Verity/precache-manifest.ca499116fcc1671d1f5f7bf4c3b1f8c2.js"
 );
 
 workbox.clientsClaim();
