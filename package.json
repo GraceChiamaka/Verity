@@ -2,7 +2,7 @@
   "name": "verity",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amriesgrace.github.io/Verity/",
+  "homepage": "https://gracechiamaka.github.io/Verity/",
   "dependencies": {
     "classnames": "^2.2.6",
     "gh-pages": "^2.0.1",
