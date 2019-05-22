@@ -32,7 +32,7 @@ const login = (props) => {
                                         <input className="form-control SignUp-input" placeholder="Password" />
                                     </div>
                                     <div className="form-group mt-4 text-center">
-                                        <Link className="c-brand f-16 f-bold">Forgot Password?</Link>
+                                        <Link className="c-brand f-16 f-bold" to='/'>Forgot Password?</Link>
                                     </div>
                                     <div className="form-group mt-5 text-center">
                                         <button className="SignUp-btn">LogIn</button>

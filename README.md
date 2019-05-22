@@ -1,11 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### To install locally 
-- Clone the app on your system `git clone link`
-- Cd into project directory
-- Run `npm or yarn install `
-- Then run `npm or yarn start`
-
 ## Available Scripts
 
 In the project directory, you can run:

@@ -15,7 +15,7 @@ import Group from '../Containers/View/Group/Group';
 export default () => (
     <HashRouter>
         <div>
-            <Route path='/' exact component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/onboarding" component={OnBoarding} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
