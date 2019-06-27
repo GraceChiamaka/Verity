@@ -1,12 +1,52 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
 import Footer from '../../../Components/Navigation/Footer';
 import './Register.scss';
+import config from '../../../config';
+import {session} from '../../../config/utils';
+import Axios from 'axios';
 
 import Logo from '../../../assets/images/big_logo.png'
 
-const register = (props) => {
+function Register(props){
+    const [state,setState] = useState({}),
+    
+        handleChange = (e)=>{
+            setState({
+                ...state,
+                [e.target.id] : e.target.value
+            });
+        },
+
+        register = async(e)=>{
+            try {
+                e.preventDefault();
+                let {data:{user}} = await Axios({
+                    method : 'POST',
+                    url : config.BASE_URL+'/users/signup',
+                    data : {...state},
+                    headers : {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
+                
+                /* 
+                    If you're using redux, you can store your data in redux store, 
+                    I'm storing the basic user info in session */
+
+                session.set("id",user.id);
+                session.set("email",user.email);
+                session.set("token",user.token);
+
+                console.log(session.get("token"));
+                alert("Registration successful");
+                /* Redirect user to route where they chose their user type (Individual, denomination...) */
+            } catch (err) {
+                alert(err.response.data.message)
+            }
+        };
+
     return (
         <Aux>
             <div className="SignUp">
@@ -25,22 +65,31 @@ const register = (props) => {
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     </p>
                                 </div>
-                                <form className="f-16">
-                                    <div className="form-group">
+                                <form className="f-16" onSubmit={register}>
+                                    {/* <div className="form-group">
                                         <input className="form-control SignUp-input" placeholder="Full Name" />
+                                    </div> */}
+                                    <div className="form-group mt-4">
+                                        <input 
+                                            onChange={handleChange}
+                                            id="email"
+                                            className="form-control SignUp-input" 
+                                            placeholder="Email Address" />
                                     </div>
                                     <div className="form-group mt-4">
-                                        <input className="form-control SignUp-input" placeholder="Email Address" />
+                                        <input 
+                                            onChange={handleChange}
+                                            id="password"
+                                            className="form-control SignUp-input" 
+                                            type="password"
+                                            placeholder="Password" />
                                     </div>
-                                    <div className="form-group mt-4">
-                                        <input className="form-control SignUp-input" placeholder="Password" />
-                                    </div>
-                                    <div className="form-group mt-4">
+                                    {/* <div className="form-group mt-4">
                                         <input className="form-control SignUp-input" placeholder="Phone Number" />
                                     </div>
                                     <div className="form-group mt-4">
                                         <input className="form-control SignUp-input" placeholder="Denomination" />
-                                    </div>
+                                    </div> */}
                                     <div className="form-group mt-4 text-center">
                                         <button className="SignUp-btn">Sign Up</button>
                                     </div>
@@ -58,4 +107,4 @@ const register = (props) => {
     )
 }
 
-export default register;
+export default Register;
