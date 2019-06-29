@@ -1,17 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
 import Footer from '../../../Components/Navigation/Footer';
 import './Register.scss';
-import config from '../../../config';
-import {session} from '../../../config/utils';
-import Axios from 'axios';
+import {session,postContent} from '../../../config/utils';
 
 import Logo from '../../../assets/images/big_logo.png'
 
 function Register(props){
     const [state,setState] = useState({}),
-    
+        [loading,setLoading] = useState(false),
         handleChange = (e)=>{
             setState({
                 ...state,
@@ -22,13 +20,10 @@ function Register(props){
         register = async(e)=>{
             try {
                 e.preventDefault();
-                let {data:{user}} = await Axios({
-                    method : 'POST',
-                    url : config.BASE_URL+'/users/signup',
-                    data : {...state},
-                    headers : {
-                      'X-Requested-With': 'XMLHttpRequest'
-                    }
+                setLoading(true);
+                const user = await postContent({
+                    url : '/users/signup',
+                    data : {...state}
                 });
                 
                 /* 
@@ -39,11 +34,13 @@ function Register(props){
                 session.set("email",user.email);
                 session.set("token",user.token);
 
-                console.log(session.get("token"));
+                console.log(user);
                 alert("Registration successful");
+                setLoading(false);
                 /* Redirect user to route where they chose their user type (Individual, denomination...) */
-            } catch (err) {
-                alert(err.response.data.message)
+            } catch ({message}) {
+                alert(message);
+                setLoading(false);
             }
         };
 
@@ -66,6 +63,7 @@ function Register(props){
                                     </p>
                                 </div>
                                 <form className="f-16" onSubmit={register}>
+                                    {loading && <h4>Please wait.....</h4>}
                                     {/* <div className="form-group">
                                         <input className="form-control SignUp-input" placeholder="Full Name" />
                                     </div> */}

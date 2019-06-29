@@ -1,11 +1,52 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
+// import Footer from '../../../Components/Navigation/Footer';
 import './Register.scss';
+import {session, postContent} from '../../../config/utils';
 
 import Logo from '../../../assets/images/big_logo.png'
 
-const login = (props) => {
+export default (props) => {
+    const [state,setState] = useState({}),
+        [loading,setLoading] = useState(false),
+    
+        handleChange = (e)=>{
+            setState({
+                ...state,
+                [e.target.id] : e.target.value
+            });
+        },
+
+        login = async(e)=>{
+            try {
+                e.preventDefault();
+                setLoading(true);
+                const user = await postContent({
+                    url : '/users/signin',
+                    data : {...state}
+                });
+                
+                /* 
+                    If you're using redux, you can store your data in redux store, 
+                    I'm storing the basic user info in session */
+
+                session.set("id",user.id);
+                session.set("email",user.email);
+                session.set("token",user.token);
+
+                alert("Login successful");
+                console.log(user)
+                setLoading(false);
+                /* Redirect user to route where they chose their user type (Individual, denomination...) */
+            } catch ({message}) {
+                alert(message);
+                setLoading(false);
+            }
+        };
+
+
+
     return (
         <Aux>
             <div className="SignUp">
@@ -24,12 +65,21 @@ const login = (props) => {
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     </p>
                                 </div>
-                                <form className="f-16">
+                                <form className="f-16" onSubmit={login}>
+                                    {loading && <h4>Please wait.....</h4>}
                                     <div className="form-group">
-                                        <input className="form-control SignUp-input" placeholder="Full Name" />
+                                        <input 
+                                            onChange={handleChange} 
+                                            id="email" className="form-control SignUp-input" 
+                                            placeholder="Email address" />
                                     </div>
                                     <div className="form-group mt-4">
-                                        <input className="form-control SignUp-input" placeholder="Password" />
+                                        <input 
+                                            onChange={handleChange} 
+                                            id="password" 
+                                            type="password"
+                                            className="form-control SignUp-input" 
+                                            placeholder="Password" />
                                     </div>
                                     <div className="form-group mt-4 text-center">
                                         <Link className="c-brand f-16 f-bold" to='/'>Forgot Password?</Link>
@@ -50,6 +100,3 @@ const login = (props) => {
         </Aux>
     )
 }
-
-
-export default login;

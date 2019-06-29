@@ -8,7 +8,7 @@ export function formatUrl(url) {
 export function indexOf(yyyy, prop, value){
   for(let i=0; i < yyyy.length; i++){
 
-      if(yyyy[i][prop] == value){
+      if(yyyy[i][prop] === value){
           return i;
       }
   }
@@ -41,25 +41,23 @@ export async function getContent({url,method='get'}) {
 
   export async function postContent({url,data,method='POST',baseUrl=config.BASE_URL}) {
     try {
-      const token = session.get('token');
+      const token = session.get('token'),
+        headers = {'X-Requested-With': 'XMLHttpRequest'};
         if(!token){
             throw new Error("Invalid token");
+        } else{
+          headers.Authorization = `bearer ${token}`;
         }
-
-        console.log(baseUrl+url);
+        
       const result = await Axios({
         method,
         url : baseUrl+url,
         data,
-        headers : {
-          'X-Requested-With': 'XMLHttpRequest',
-          'Authorization' : `bearer ${token}`
-        }
+        headers
       });
   
       return result.data;
     } catch (err) {
-      console.log(err);
       errorMessage(err);
     }
   }
