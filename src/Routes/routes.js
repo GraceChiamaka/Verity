@@ -11,6 +11,7 @@ import AdminProfile from '../Containers/View/Admin/AdminProfile';
 import GeneralNetwork from '../Containers/View/Network/GeneralNetwork';
 import Network from '../Containers/View/Network/denominationNetwork';
 import Group from '../Containers/View/Group/Group';
+import Test from '../Containers/View/Registration/testSignup';
 
 export default () => (
     <HashRouter>
@@ -26,6 +27,7 @@ export default () => (
             <Route path="/network" component={GeneralNetwork} />
             <Route path="/denomination" component={Network} />
             <Route path="/group" component={Group} />
+            <Route path="/test" component={Test} />
         </div>
     </HashRouter>
 );
