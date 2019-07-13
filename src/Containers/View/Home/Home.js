@@ -15,7 +15,9 @@ class Home extends Component {
         showModal: false,
         showdenominationModal: false,
         showUserModal: false,
-        showverifyModal:false
+        showverifyModal:false,
+        formdata: '',
+        userdata: '',
     }
     showModal = (ev) => {
         this.setState({ showModal:true });
@@ -27,6 +29,19 @@ class Home extends Component {
             showUserModal: false,
             showVerifyModal: false
          });
+    }
+    formSubmit = (ev) => {
+        ev.preventDefault();
+        if(this.state.userdata === "individual"){
+            this.setState({ showUserModal: true });
+        } else if( this.state.userdata === "denomination"){
+            this.setState({ showdenominationModal: true });
+        }else{
+            return;
+        }
+    }
+    userOption = (ev) => {
+        this.setState({ userdata: ev.target.value })
     }
     showDenominationModal = (ev) =>{
         ev.preventDefault();
@@ -80,10 +95,12 @@ class Home extends Component {
                                 <div className="modal-content">
                                     <h3 className='text-center c-brand f-bold f-20'>Welcome to the church organisation Platform</h3>
                                     <p className="text-center f-20 c-brown f-med f-14">Please select an option for you to enter</p>
-                                    <form onSubmit={this.showDenominationModal}>
-                                        <div className="form-group mt-5">
+                                    <form onSubmit={this.formSubmit}>
+                                        <div className="form-group mt-5" onChange={this.userOption.bind(this)}>
                                             <div className="form-check form-check-inline mr-5e">
-                                                <input className="form-check-input " type="radio" name="inlineRadioOptions" id="individaul" value="individual" required />
+                                                <input className="form-check-input " type="radio" name="inlineRadioOptions" 
+                                                    id="individaul" value="individual"
+                                                    required />
                                                 <label className="form-check-label f-16 f-med" htmlFor="individual">Individual</label>
                                             </div>
                                             <div className="form-check form-check-inline mr-5e">
@@ -120,13 +137,17 @@ class Home extends Component {
                                                     <input type="text" className="form-control" name="name" required />
                                                     <span className="f-12">(Enter the name of your denomination)</span>
                                                 </div>
+                                                <div className="form-group mt-5 text-left">
+                                                    <label>Email address</label>
+                                                    <input type="email" className="form-control" name="email" required />
+                                                </div>
                                                 <div className="form-group mt-3 text-left">
-                                                    <label>Headquarter's Address</label>
+                                                    <label>Denomination's Address</label>
                                                     <input type="text" name='hq-address' className="form-control" required />
                                                 </div>
                                                 <div className="form-group mt-3 text-left">
-                                                    <label>Description</label>
-                                                    <textarea className="form-control" name="description" ></textarea>
+                                                    <label>Phone Number</label>
+                                                    <input type="text" name='phone-number' className="form-control" required />
                                                 </div>
                                                 <div className="form-group mt-5 text-center">
                                                     <button type='submit' className="btn btn-brand text-white">Create</button>
@@ -154,23 +175,31 @@ class Home extends Component {
                                                 <h3 className='text-center c-brand f-bold f-20'>Create a profile for yourself</h3>
                                                 <p className="text-center f-20 c-brown f-med f-14">Please fill the short form below</p>
                                                 <form className="onboarding-form" onSubmit={this.showVerificationModal}>
+                                                <div className="form-group mt-5 text-left">
+                                                        <label>Upload a profile photo</label>
+                                                        <input type="file" className="form-control" name="profile-img" />
+                                                    </div>
                                                     <div className="form-group mt-5 text-left">
-                                                        <label>Denomination Name</label>
-                                                        <input type="text" className="form-control" name="name" required />
-                                                        <span className="f-12">(Enter the name of your denomination)</span>
+                                                        <label>Full Name</label>
+                                                        <input type="text" className="form-control" name="full-name" required />
+                                                    </div>
+                                                    <div className="form-group mt-5 text-left">
+                                                        <label>Username</label>
+                                                        <input type="text" className="form-control" name="username" required />
+                                                    </div>
+                                                    <div className="form-group mt-5 text-left">
+                                                        <label>Phone Number</label>
+                                                        <input type="text" className="form-control" name="phone-number" required />
                                                     </div>
                                                     <div className="form-group mt-3 text-left">
                                                         <label>Select your Branch</label>
                                                         <select name='branch' className="form-control" required>
-                                                            <option></option>
+                                                            <option>--choose branch--</option>
                                                             <option>Eko atlantic</option>
                                                             <option>Ajao Estate</option>
                                                         </select>
                                                     </div>
-                                                    <div className="form-group mt-3 text-left">
-                                                        <label>Description</label>
-                                                        <textarea className="form-control" name="description" ></textarea>
-                                                    </div>
+                                                   
                                                     <div className="form-group mt-5 text-center">
                                                         <button type='submit' className="btn btn-brand text-white">Create</button>
                                                     </div>

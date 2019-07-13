@@ -54,7 +54,10 @@ export default (props) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6 col-lg-6">
-                                <img src={Logo} className="img-fluid" alt="big-logo" />
+                                <Link to="/" title="back to homepage">
+                                    <img src={Logo} className="img-fluid" alt="big-logo" />
+                                </Link>
+                                
                             </div>
                             <div className="col-md-6 col-lg-6 pt-5 mt-5">
                                 <div className="SignUp-intro mb-5">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, Navbar }from 'react-bootstrap';
-
+import { NavLink } from 'react-router-dom'
 import Aux from '../../hoc/hoc';
 import Logo from '../../assets/images/s4.png'
 import './Header.scss';
@@ -16,8 +16,8 @@ const header = (props) => {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto header-link ">
-                      <Nav.Link className="c-brand f-16 f-bold nav-border" href="/login">Login</Nav.Link>
-                      <Nav.Link className="c-red f-16 f-bold" href="/register">Sign Up</Nav.Link>
+                      <NavLink className="c-brand f-16 f-bold nav-border nav-link" to="/login">Login</NavLink>
+                      <NavLink className="c-red f-16 f-bold nav-link" to="/register">Sign Up</NavLink>
                       
                     </Nav>
                   </Navbar.Collapse>
