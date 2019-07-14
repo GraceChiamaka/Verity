@@ -27,4 +27,4 @@ const envConfig = (env)=>{
 }
 
 
-export default envConfig('development');
+export default envConfig('production');
