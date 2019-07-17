@@ -1,5 +1,6 @@
 import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Dropdown } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 import Aux from '../../hoc/hoc';
 import '../../assets/scss/_base.scss';
@@ -17,21 +18,21 @@ const dashboardHeader = (props) => {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto header-link ">
-                                <Nav.Link className="c-brand f-16 f-bold" href="/login">
+                                <NavLink className="c-brand f-16 f-bold" to="/">
                                     <i className="fa fa-home c-blue mr-1"></i>
                                     <span className="f-16 f-bold c-blue">Home</span>
-                                </Nav.Link>
-                                <Nav.Link className="c-red f-16 f-bold" href="/register">
+                                </NavLink>
+                                <NavLink className="c-red f-16 f-bold" to="/register">
                                     <i className="fa fa-bell-o mr-1 c-blue"></i>
                                     <span className="f-16 f-bold c-blue">Notifications</span>
-                                </Nav.Link>
-                                <Nav.Link className="c-red f-16 f-bold" href="/register">
+                                </NavLink>
+                                <NavLink className="c-red f-16 f-bold" to="/register">
                                     <i className="fa fa-envelope-o mr-1 c-blue"></i>
                                     <span className="f-16 f-bold c-blue">Messages</span>
-                                </Nav.Link>
+                                </NavLink>
                             </Nav>
                             <Nav className="m-auto header-link ">
-                                <Navbar.Brand href="/">
+                                <Navbar.Brand to="/">
                                     <img src={Logo} alt="logo" />
                                 </Navbar.Brand>
                             </Nav>
@@ -40,8 +41,18 @@ const dashboardHeader = (props) => {
                                     <input className="form-control mr-sm-2" type="search" placeholder="Search verity" aria-label="Search" />
                                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                 </form>
-                                <img src={UserPhoto} className="user-img img-fluid" alt="user" />
-                                <span className="blue-dot"></span>
+                                <Dropdown className="dashboard-nav--dropdown">
+                                    <Dropdown.Toggle variant="transparent" id="dropdown-basic" type="link">
+                                        <img src={UserPhoto} className="user-img img-fluid" alt="user" />
+                                        <span className="blue-dot"></span>
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Link to="/requests" className="text-dark dropdown-item">Requests</Link>
+                                        
+                                        <Link to="/" className="text-dark dropdown-item">Log Out</Link>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </Nav>
                       </Navbar.Collapse>
                     </Navbar>

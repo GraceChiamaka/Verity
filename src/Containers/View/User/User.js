@@ -146,11 +146,11 @@ const User = (props) => {
                                                     
                                                 </div>
                                                 <div className="col-10 col-md-10 pl-0">
-                                                        <div class="input-group mb-3">
-                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
+                                                        <div className="input-group mb-3">
+                                                        <input type="text" className="form-control border-right-0" placeholder="Comment..." 
                                                             aria-label="Comment..." aria-describedby="basic-addon2" />
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text border-left-0" id="basic-addon2">
+                                                        <div className="input-group-append">
+                                                            <span className="input-group-text border-left-0" id="basic-addon2">
                                                                 <i className="fa fa-image c-blue"></i>
                                                             </span>
                                                         </div>
@@ -219,11 +219,11 @@ const User = (props) => {
                                                     
                                                 </div>
                                                 <div className="col-10 col-md-10 pl-0">
-                                                        <div class="input-group mb-3">
-                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
+                                                        <div className="input-group mb-3">
+                                                        <input type="text" className="form-control border-right-0" placeholder="Comment..." 
                                                             aria-label="Comment..." aria-describedby="basic-addon2" />
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text border-left-0" id="basic-addon2">
+                                                        <div className="input-group-append">
+                                                            <span className="input-group-text border-left-0" id="basic-addon2">
                                                                 <i className="fa fa-image c-blue"></i>
                                                             </span>
                                                         </div>
@@ -292,11 +292,11 @@ const User = (props) => {
                                                     
                                                 </div>
                                                 <div className="col-10 col-md-10 pl-0">
-                                                        <div class="input-group mb-3">
-                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
+                                                        <div className="input-group mb-3">
+                                                        <input type="text" className="form-control border-right-0" placeholder="Comment..." 
                                                             aria-label="Comment..." aria-describedby="basic-addon2" />
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text border-left-0" id="basic-addon2">
+                                                        <div className="input-group-append">
+                                                            <span className="input-group-text border-left-0" id="basic-addon2">
                                                                 <i className="fa fa-image c-blue"></i>
                                                             </span>
                                                         </div>
@@ -364,11 +364,11 @@ const User = (props) => {
                                                     
                                                 </div>
                                                 <div className="col-10 col-md-10 pl-0">
-                                                        <div class="input-group mb-3">
-                                                        <input type="text" class="form-control border-right-0" placeholder="Comment..." 
+                                                        <div className="input-group mb-3">
+                                                        <input type="text" className="form-control border-right-0" placeholder="Comment..." 
                                                             aria-label="Comment..." aria-describedby="basic-addon2" />
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text border-left-0" id="basic-addon2">
+                                                        <div className="input-group-append">
+                                                            <span className="input-group-text border-left-0" id="basic-addon2">
                                                                 <i className="fa fa-image c-blue"></i>
                                                             </span>
                                                         </div>

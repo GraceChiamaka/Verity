@@ -1,0 +1,77 @@
+
+
+@import './mixins';
+
+
+
+table{
+	font-family: 'Quicksans', sans-serif;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 13px;
+	table-layout: fixed;
+	caption {
+		font-size: 1.5em;
+		margin: .5em 0 .75em;
+	}
+	tr {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		padding: .35em;
+	}
+	th{
+		padding: 1em !important;
+		text-align: left;
+		font-size: 14px
+	}td {
+		padding: 0.6rem !important;
+		text-align: left;
+	}
+	th {
+		font-size: .85em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+	@include screenSize(ss-phone){
+		table {
+			border: 0;
+			caption {
+				font-size: 1.3em;
+			}
+			thead {
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			} 
+			tr {
+				border-bottom: 3px solid #ddd;
+				display: block;
+				margin-bottom: .625em;
+			}
+			td {
+				border-bottom: 1px solid #ddd;
+				display: block;
+				font-size: .8em;
+				text-align: right;
+				&::before {
+					content: attr(data-label);
+					float: left;
+					font-weight: bold;
+					text-transform: uppercase;
+					padding-right: 70px;
+				}
+				&:last-child {
+	  				border-bottom:0
+				}
+			} 
+		}
+	}
+}
