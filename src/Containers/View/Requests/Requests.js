@@ -97,7 +97,7 @@ class Requests extends Component {
                                                 <td data-label="Request Type" colSpan="2">Certificate</td>
                                                 <td data-label="Description" colSpan="4">
                                                     As you go through life you'll see 
-                                                    There is so much that we Don't understand 
+                                                    There is so much that we 
                                                 
                                                 </td>
                                                 <td data-label="Status" colSpan="2" className="text-success">
@@ -105,30 +105,30 @@ class Requests extends Component {
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>2</td>
-                                                <td colSpan="2">Baptisimal Certificate</td>
-                                                <td colSpan="2">Ajao Estate</td>
-                                                <td colSpan="2">Certificate</td>
-                                                <td colSpan="4">
+                                                <td data-label="s/n">2</td>
+                                                <td data-label="Title" colSpan="2">Baptisimal Certificate</td>
+                                                <td data-label="Branch" colSpan="2">Ajao Estate</td>
+                                                <td data-label="Request Type" colSpan="2">Certificate</td>
+                                                <td data-label="Description" colSpan="4">
                                                     As you go through life you'll see 
                                                     There is so much that we Don't understand 
                                                 
                                                 </td>
-                                                <td colSpan="2"  className="text-warning">
+                                                <td data-label="Status" colSpan="2"  className="text-warning">
                                                     <strong>Pending</strong> 
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>3</td>
-                                                <td colSpan="2">Baptisimal Certificate</td>
-                                                <td colSpan="2">Ajao Estate</td>
-                                                <td colSpan="2">Certificate</td>
-                                                <td colSpan="4">
+                                                <td data-label="s/n">3</td>
+                                                <td data-label="Title" colSpan="2">Baptisimal Certificate</td>
+                                                <td data-label="Branch" colSpan="2">Ajao Estate</td>
+                                                <td data-label="Request Type" colSpan="2">Certificate</td>
+                                                <td data-label="Description" colSpan="4">
                                                     As you go through life you'll see 
                                                     There is so much that we Don't understand 
                                                     
                                                 </td>
-                                                <td colSpan="2" className="text-danger">
+                                                <td data-label="Status" colSpan="2" className="text-danger">
                                                     <strong>Rejected</strong> 
                                                 </td>
                                             </tr>

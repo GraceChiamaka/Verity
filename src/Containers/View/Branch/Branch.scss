@@ -163,6 +163,9 @@
     top:0px;
     background: rgba(0,0,0,0.55);
     position: absolute;
+    @include screenSize(xs-phone){
+        height: 550px;
+    }
 }
 .change-group--btn{
     background: $color-2;
