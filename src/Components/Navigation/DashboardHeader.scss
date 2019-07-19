@@ -8,20 +8,19 @@
 .navbar{
     padding: 0;
     .navbar-collapse{
-        align-items: flex-end;
+        align-items: center;
     }
     .navbar-nav{
-        
-        .nav-item{
-            .nav-link{
-                &:hover{
-                    background: transparent !important;
-                    border-bottom: 2px solid $color-1;
-                }
-                i.fa{
-                    &hover{
-                        background: $color-1;
-                    }
+        .nav-link{
+            padding-top: 1.8rem;
+            padding-bottom: 1.8rem;
+            &:hover{
+                background: transparent !important;
+                border-bottom: 2px solid $color-1;
+            }
+            i.fa{
+                &hover{
+                    background: $color-1;
                 }
             }
         }

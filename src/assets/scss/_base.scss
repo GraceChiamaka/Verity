@@ -1,6 +1,11 @@
 @import './variables.scss';
 @import './_mixins.scss';
 
+html, body{
+    font-family: 'Quicksans', sans-serif;
+    
+}
+
 /*** COLORS ***/
 .c-brand{ color: $color-1 !important; }
 .c-red{ color: $color-2 !important; }

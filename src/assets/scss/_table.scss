@@ -7,75 +7,83 @@ table {
 	width: 100%;
 	table-layout: fixed;
 }
-  
+	
 table caption {
 	font-size: 1.5em;
 	margin: .5em 0 .75em;
 }
-  
-  
-  table tr {
+	
+	
+table tr {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	padding: .35em;
-  }
-  
-  table th,
-  table td {
+}
+	
+table th,
+table td {
 	padding: 0.6em !important;
 	text-align: left;
-  }
-  
-  table th {
+}
+	
+table th {
 	font-size: .85em;
 	letter-spacing: .1em;
 	text-transform: uppercase;
-  }
-
-  
-  @media screen and (max-width: 600px) {
-	table {
-	  border: 0;
+}
+table.table-border-none{
+	border: none;
+	tr{
+		border: none;
+		td{
+			border: none;
+		}
 	}
-  
+}
+	
+	@media screen and (max-width: 600px) {
+	table {
+		border: 0;
+	}
+	
 	table caption {
-	  font-size: 1.3em;
+		font-size: 1.3em;
 	}
 	
 	table thead {
-	  border: none;
-	  clip: rect(0 0 0 0);
-	  height: 1px;
-	  margin: -1px;
-	  overflow: hidden;
-	  padding: 0;
-	  position: absolute;
-	  width: 1px;
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
 	}
-  
+	
 	table tr {
-	  border-bottom: 3px solid #ddd;
-	  display: block;
-	  margin-bottom: .625em;
+		border-bottom: 3px solid #ddd;
+		display: block;
+		margin-bottom: .625em;
 	}
 	
 	table td {
-	  border-bottom: 1px solid #ddd;
-	  display: block;
-	  font-size: .8em;
-	  text-align: right;
+		border-bottom: 1px solid #ddd;
+		display: block;
+		font-size: .8em;
+		text-align: right;
 	}
-  
+	
 	
 	table td::before {
-	  content: attr(data-label);
-	  float: left;
-	  font-weight: bold;
-	  text-transform: uppercase;
-	  padding-right: 70px;
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding-right: 70px;
 	}
 	
 	table td:last-child {
-	  border-bottom: 0;
+		border-bottom: 0;
 	}
-  }
+	}

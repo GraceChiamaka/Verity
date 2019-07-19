@@ -14,20 +14,20 @@ const dashboardHeader = (props) => {
         <Aux>
             <header className="DashboardHeader f-quick bg-white">
                 <div className="container f-quick">
-                    <Navbar bg="transparent" expand="lg">
+                    <Navbar bg="transparent" expand="lg" >
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto header-link ">
-                                <NavLink className="c-brand f-16 f-bold" to="/">
-                                    <i className="fa fa-home c-blue mr-1"></i>
+                                <NavLink className="c-brand f-16 f-bold nav-link" to="/">
+                                    <i className="fa fa-home c-blue mr-1 f-24"></i>
                                     <span className="f-16 f-bold c-blue">Home</span>
                                 </NavLink>
-                                <NavLink className="c-red f-16 f-bold" to="/register">
-                                    <i className="fa fa-bell-o mr-1 c-blue"></i>
+                                <NavLink className="c-red f-16 f-bold nav-link mx-4" to="/register">
+                                    <i className="fa fa-bell-o mr-1 c-blue f-24"></i>
                                     <span className="f-16 f-bold c-blue">Notifications</span>
                                 </NavLink>
-                                <NavLink className="c-red f-16 f-bold" to="/register">
-                                    <i className="fa fa-envelope-o mr-1 c-blue"></i>
+                                <NavLink className="c-red f-16 f-bold nav-link" to="/register">
+                                    <i className="fa fa-envelope-o mr-1 c-blue f-24"></i>
                                     <span className="f-16 f-bold c-blue">Messages</span>
                                 </NavLink>
                             </Nav>
@@ -51,6 +51,7 @@ const dashboardHeader = (props) => {
                                         <Link to="/requests" className="text-dark dropdown-item">Requests</Link>
                                         
                                         <Link to="/" className="text-dark dropdown-item">Log Out</Link>
+                                        <Link to="/userProfile" className="text-dark dropdown-item">Profile</Link>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </Nav>

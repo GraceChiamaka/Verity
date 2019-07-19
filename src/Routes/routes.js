@@ -6,6 +6,7 @@ import Register from '../Containers/View/Registration/Regsiter';
 import Login from '../Containers/View/Registration/Login';
 import Admin from '../Containers/View/Admin/Admin';
 import User from '../Containers/View/User/User';
+import UserProfile from '../Containers/View/User/userProfile';
 import Branch from '../Containers/View/Branch/Branch';
 import AdminProfile from '../Containers/View/Admin/AdminProfile';
 import GeneralNetwork from '../Containers/View/Network/GeneralNetwork';
@@ -22,6 +23,7 @@ export default () => (
             <Route path="/login" component={Login} />
             <Route path="/admin" component={Admin} />
             <Route path="/user" component={User} />
+            <Route path="/userProfile" component={UserProfile} />
             <Route path="/branch" component={Branch} />
             <Route path="/adminprofile" component={AdminProfile} />
             <Route path="/network" component={GeneralNetwork} />
