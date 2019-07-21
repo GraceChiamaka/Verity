@@ -1,0 +1,23 @@
+@import '../../../assets/scss/variables';
+
+.custom-nav{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    ol{
+        padding-left:10px
+    }
+    .custom-nav--list{
+        display: inline-block;
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        a{
+            color: $color-1;
+            text-decoration: none;
+        }
+    }
+}
+.custom-nav--list a.active{
+    color: $color-2;
+}

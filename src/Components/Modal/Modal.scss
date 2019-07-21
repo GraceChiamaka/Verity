@@ -1,0 +1,83 @@
+@import '../../assets/scss//mixins';
+
+
+.Modal{
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    left: 362px;
+    top: 120px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    
+    .modal-content{
+        border: none;
+        padding: 2rem 4rem;
+    }
+}
+.modal-lg{
+    width: 70% ;
+    left: 300px;
+    top: 60px;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+@include screenSize(small-desktop){
+    .Modal{
+        position: absolute;
+        left: 255px;
+    }
+    .modal-lg{
+        left: 170px;
+    }
+}
+@include screenSize(tablet){
+    .Modal{
+        left: 190px;
+        position: absolute;
+    }
+    .modal-lg{
+        width: 90%;
+        left: 35px;
+    }
+    .church-bg{
+        display: none;
+    }
+}
+@include screenSize(ls-phone){
+    .Modal{
+        left: 100px;
+        width: 80%;
+    }
+}
+@include screenSize(ss-phone){
+    .Modal{
+        left:20px;
+        width: 90%;
+        position: absolute;
+    }
+
+}
+@include screenSize(xs-phone){
+    .Modal{
+        position: absolute;
+        width: 80%;
+        left: 30px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        top: 60px;
+        .modal-content{
+            padding: 1rem;
+        }
+    }
+    .modal-lg{
+        width: 90%;
+        left: 15px;
+        
+    }
+}
