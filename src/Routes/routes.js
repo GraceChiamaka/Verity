@@ -13,6 +13,7 @@ import GeneralNetwork from '../Containers/View/Network/GeneralNetwork';
 import Network from '../Containers/View/Network/denominationNetwork';
 import Group from '../Containers/View/Group/Group';
 import Requests from '../Containers/View/Requests/Requests';
+import UserBoarding from '../Containers/View/OnBoarding/UserBoarding';
 
 export default () => (
     <BrowserRouter>
@@ -30,6 +31,8 @@ export default () => (
             <Route path="/denomination" component={Network} />
             <Route path="/group" component={Group} />
             <Route path="/requests" component={Requests} />
+            <Route path="/userboarding" component={UserBoarding} />
+           
         </div>
     </BrowserRouter>
 );
