@@ -1,50 +1,33 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
-// import Footer from '../../../Components/Navigation/Footer';
 import './Register.scss';
-import {session, postContent} from '../../../config/utils';
-
-import Logo from '../../../assets/images/big_logo.png'
+import Logo from '../../../assets/images/big_logo.png';
+import {useForm} from '../../hooks.js';
+import {useSelector, useDispatch} from 'react-redux';
+import {login} from '../../action/user';
 
 export default (props) => {
-    const [state,setState] = useState({}),
-        [loading,setLoading] = useState(false),
+    const [loading,setLoading] = useState(false),
+    {values,handleChange,handleSubmit} = useForm(submitForm),
+    [display,setDisplay] = useState(""),
+    dispatch = useDispatch(),
+    {user,error} = useSelector(({user})=>user);
+
+    function submitForm(){
+        setLoading(true);
+        dispatch(login(values));
+    }
     
-        handleChange = (e)=>{
-            setState({
-                ...state,
-                [e.target.id] : e.target.value
-            });
-        },
-
-        login = async(e)=>{
-            try {
-                e.preventDefault();
-                setLoading(true);
-                const user = await postContent({
-                    url : '/users/signin',
-                    data : {...state}
-                });
-                
-                /* 
-                    If you're using redux, you can store your data in redux store, 
-                    I'm storing the basic user info in session */
-
-                session.set("id",user.id);
-                session.set("email",user.email);
-                session.set("token",user.token);
-
-                alert("Login successful");
-                console.log(user)
-                setLoading(false);
-                /* Redirect user to route where they chose their user type (Individual, denomination...) */
-            } catch ({message}) {
-                alert(message);
-                setLoading(false);
-            }
-        };
-
+    useEffect(()=>{
+        if(error){
+            setDisplay(<h1>{error}</h1>);
+        } else if(user){
+            props.history.push("/admin/dashboard");
+        } else if(loading){
+            setDisplay(<h1>Diplay progress here</h1>);
+        }
+    },[user,error]);
 
 
     return (
@@ -68,8 +51,8 @@ export default (props) => {
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     </p>
                                 </div>
-                                <form className="f-16" onSubmit={login}>
-                                    {loading && <h4>Please wait.....</h4>}
+                                <form className="f-16" onSubmit={handleSubmit}>
+                                    {display}
                                     <div className="form-group">
                                         <input 
                                             onChange={handleChange} 

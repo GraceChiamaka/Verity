@@ -8,8 +8,10 @@ import ChurchLogo from '../../../assets/images/church_logo.png';
 import UserImg from '../../../assets/images/user_2.png';
 import UserIcon from '../../../assets/images/user_3.png';
 import  UserPost from '../../../assets/images/post_1.png';
+import {useForm} from '../../hooks';
 
-const admin = (props) => {
+export default(props)=>{
+    const {handleChange,handleSubmit,values} = useForm();
     return (
         <div className="Admin">
             <Header />
@@ -92,8 +94,12 @@ const admin = (props) => {
                                 <section className="create-post p-3">
                                     <div class="media">
                                         <img src={UserImg} class="mr-3" alt="logged in user" />
-                                        <div class="media-body">
-                                            <input type="text" className="create-post-input f-14 f-bold" placeholder='Create a post...' />
+                                        <form onSubmit={handleSubmit} class="media-body">
+                                            <input 
+                                                onChange={handleChange}
+                                                type="text" 
+                                                required
+                                                className="create-post-input f-14 f-bold" placeholder='Create a post... ' />
                                             <div className="uploads mt-3">
                                                 <input type="file" className="upload-input" />
                                                 <button className="btn btn-upload c-brand f-12 f-bold">
@@ -105,7 +111,7 @@ const admin = (props) => {
                                                     Tag Members
                                                 </button>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </section>
                                 <section className='old-post bg-white border p-4'>
@@ -440,4 +446,4 @@ const admin = (props) => {
     );
 };
 
-export default admin;
+// export default admin;

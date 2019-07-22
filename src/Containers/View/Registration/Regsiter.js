@@ -1,48 +1,39 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Aux from '../../../hoc/hoc';
 import Footer from '../../../Components/Navigation/Footer';
 import './Register.scss';
-import {session,postContent} from '../../../config/utils';
+import config from '../../../config';
 
-import Logo from '../../../assets/images/big_logo.png'
+import Logo from '../../../assets/images/big_logo.png';
+import {useForm} from '../../hooks.js';
+import {useSelector, useDispatch} from 'react-redux';
+import {register} from '../../action/user';
 
 function Register(props){
-    const [state,setState] = useState({}),
-        [loading,setLoading] = useState(false),
-        handleChange = (e)=>{
-            setState({
-                ...state,
-                [e.target.id] : e.target.value
-            });
-        },
+    const [loading,setLoading] = useState(false),
+        {values,handleChange,handleSubmit} = useForm(
+            submitForm,
+            {redirect_url:config.FRONTEND_URL+'/verify/email'}
+        ),
+        [display,setDisplay] = useState(""),
+        dispatch = useDispatch(),
+        {user,error} = useSelector(({user})=>user);
 
-        register = async(e)=>{
-            try {
-                e.preventDefault();
-                setLoading(true);
-                const user = await postContent({
-                    url : '/users/signup',
-                    data : {...state}
-                });
-                
-                /* 
-                    If you're using redux, you can store your data in redux store, 
-                    I'm storing the basic user info in session */
+    function submitForm(){
+        setLoading(true);
+        dispatch(register(values));
+    }
 
-                session.set("id",user.id);
-                session.set("email",user.email);
-                session.set("token",user.token);
-
-                console.log(user);
-                alert("Registration successful");
-                setLoading(false);
-                /* Redirect user to route where they chose their user type (Individual, denomination...) */
-            } catch ({message}) {
-                alert(message);
-                setLoading(false);
-            }
-        };
+    useEffect(()=>{
+        if(error){
+            setDisplay(<h1>{error}</h1>);
+        } else if(user){
+            props.history.push("/login");
+        } else if(loading){
+            setDisplay(<h1>Diplay progress here</h1>);
+        }
+    },[user,error]);
 
     return (
         <Aux>
@@ -65,11 +56,8 @@ function Register(props){
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     </p>
                                 </div>
-                                <form className="f-16" onSubmit={register}>
-                                    {loading && <h4>Please wait.....</h4>}
-                                    {/* <div className="form-group">
-                                        <input className="form-control SignUp-input" placeholder="Full Name" />
-                                    </div> */}
+                                <form className="f-16" onSubmit={handleSubmit}>
+                                    {display}
                                     <div className="form-group mt-4">
                                         <input 
                                             onChange={handleChange}
@@ -85,12 +73,7 @@ function Register(props){
                                             type="password"
                                             placeholder="Password" />
                                     </div>
-                                    {/* <div className="form-group mt-4">
-                                        <input className="form-control SignUp-input" placeholder="Phone Number" />
-                                    </div>
-                                    <div className="form-group mt-4">
-                                        <input className="form-control SignUp-input" placeholder="Denomination" />
-                                    </div> */}
+                                    
                                     <div className="form-group mt-4 text-center">
                                         <button className="SignUp-btn">Sign Up</button>
                                     </div>
