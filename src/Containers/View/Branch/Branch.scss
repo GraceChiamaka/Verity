@@ -1,0 +1,254 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.f-10{ font-size: 10px; }
+.branch-bg{
+    width: 100%;
+    height: 354px;
+    background-image: url('../../../assets/images/branch.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15px;
+}
+
+.Brach{
+    @include screenSize(tablet){
+        .col-md-3{
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+    }
+}
+
+.banner{
+    height: 50px;
+    background: #fff;
+    @include screenSize(tablet){
+        height: 65px;
+    }
+    @include screenSize(ss-phone){
+        height: 180px;
+        .banner-button{
+            margin-top:5em;
+        }
+    }
+    @include screenSize(xs-phone){
+        height:250px;
+        .banner-button{
+            margin-top: 1em;
+            button{
+                float: unset;
+                display: block;
+                margin: auto;
+            }
+            
+        }
+    }
+}
+.banner-img{
+    img{
+        position: absolute;
+        bottom:-60px;
+        @include screenSize(ss-phone){
+            bottom: -48px;
+            width: 25%;
+        }
+    }
+}
+@include screenSize(xs-phone){
+    .h-140{ height: 140px !important;}
+} 
+.border{
+    margin-top: 2em;
+}
+.branch-tabs{
+    display: inline-flex;
+    list-style: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    margin-bottom:0;
+    align-items: center;
+    padding-inline-start:0;
+    @include screenSize(ss-phone){
+        margin-top: 4em;
+    }
+    .branch-item{
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        a{
+            color: rgba(8, 88, 125, 0.7);
+            font-weight: 500;
+        }
+        &:hover{
+            border-bottom: 2px solid $color-1;
+            color: $color-1;
+        }
+    }
+}
+.branch-item.active{ 
+    border-bottom: 2px solid $color-1;
+    a{
+        color: $color-1;
+    } 
+}
+.church-details, .profile-details{ margin-top: 5rem; }
+.new-tab-container{
+    .new-tabs{
+        display: flex;
+        list-style: none;
+        background: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        margin-top: 0;
+        margin-bottom:0;
+        align-items: center;
+        padding-inline-start:0;
+        .new-tabs-item{
+            flex: 1 1 auto;
+            text-align: center;
+            padding: 0.8rem 1rem;
+            a{
+                color: $color-1;
+                font-weight: 500;
+            }
+            &:hover{
+                border-bottom: 2px solid $color-2;
+                color: $color-1;
+            }
+        }
+        .new-tabs-item.active{
+            background: $color-2;
+            a{
+                color: #fff !important; 
+            }
+            
+        }
+    }
+    @include screenSize(xs-phone){
+        .container{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+    }
+}
+.network-block{
+    width:100%;
+    height: 150px;
+    background-image: url('../../../assets/images/bg-locate.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.w-40{width: 40px;}
+.h-40{ height: 40px; }
+.h-100{ height: 100px; }
+.pos-rel{
+    position: relative;
+}
+
+.group-bg{
+    width: 100%;
+    height: 354px;
+    padding-top: 20px;
+    background-image: url('../../../assets/images/branch.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include screenSize(ss-phone){
+        height: 550px;
+    }
+}
+.dark-overlay{
+    width: 100%;
+    height:354px;
+    top:0px;
+    background: rgba(0,0,0,0.55);
+    position: absolute;
+    @include screenSize(xs-phone){
+        height: 550px;
+    }
+}
+.change-group--btn{
+    background: $color-2;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+.group-status-btn{
+    background: #FFFFFF;
+    border: 1px solid $color-1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    color: $color-1;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    i{
+        color: $color-1;
+    }
+}
+
+.resources, .branches{
+    li{
+        a{
+            font-size: 14px;
+        }
+    }
+}
+.friend-suggestions{
+    @include screenSize(tablet){
+        .col-lg-3.px-0, .col-lg-6.px-0{
+            padding-left: 15px !important;
+            padding-right: 10px !important;
+        }
+    }   
+}
+.group-suggestions{
+    .row{
+        
+        @include screenSize(tablet){
+            .col-lg-3.text-right{
+                text-align: left !important;
+            }
+            .col-lg-3.px-0, .col-lg-6.px-0{
+                padding-left: 15px !important;
+            }
+        }
+    }
+}
+.form-check-input{
+    width: 20px;
+    height: 20px;
+    &:after{
+        color: blue;
+    }
+}
+input[type='radio']{
+    background-color: blue !important;
+}
+.form-check{
+    label{
+        margin-left: 5px;
+    }
+}
+.upload-photo-btn, .upload-group-photo-input{
+    height: 110px;
+    width: 110px;
+    background: transparent;
+    border: 1px solid rgba(130,130, 130, 0.5);
+}
+.upload-group-photo-input{
+    position: absolute;
+    opacity: 0;
+}
+.group-photo{
+    @include screenSize(ss-phone){
+        text-align: left !important;
+    }
+    @include screenSize(xs-phone){
+        text-align: left !important;
+    }
+}
+
+
+

@@ -1,0 +1,82 @@
+@import './variables.scss';
+@import './_mixins.scss';
+
+html, body{
+    font-family: 'Quicksans', sans-serif;
+    
+}
+
+/*** COLORS ***/
+.c-brand{ color: $color-1 !important; }
+.c-red{ color: $color-2 !important; }
+.c-grey{ color: #828282; }
+.c-blue{ color: rgba(8, 88, 125, 0.7); }
+
+//Borders
+.bd-left--brand{ border-left: 1px solid $color-1; }
+.bd-red{ border: 1px solid $color-2; }
+
+
+/*** SIZING ***/
+//FONT-SIZE
+.f-14{ font-size: $size-1; }
+.f-16{ font-size: $size-2; }
+.f-18{ font-size: $size-3; }
+.f-20{ font-size: $size-4; }
+.f-24{ font-size: 24px; }
+.f-52{ 
+    font-size: $size-x;
+    @include screenSize(ss-phone){
+        font-size: 36px;
+    }
+}
+
+.lh-3{ line-height: $size-lg-2}
+
+.f-quick{ font-family: 'Quicksans', sans-serif; }
+
+.f-bold{ font-weight: 700; }
+.f-med{ font-weight: 500; }
+.f-light{ font-weight: 300; }
+
+//MARGIN
+.mt-6{ margin-top: $size-lg-2; }
+.mt-6e{ margin-top: $size-lg; }
+.mb-6e{ margin-bottom: $size-lg; }
+
+.btn-brand{
+    display: flex;
+    height: 40px;
+    width: auto;
+    background: linear-gradient(180deg, #D97159 0%, #08587D 100%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    &:hover{
+        box-shadow: -2px -1px 7px 1px rgba(8, 88, 125, 1);
+    }
+    &:focus{
+        box-shadow: inset 2px -2px 13px -1px rgba(217, 113, 89, 1);
+    }
+}
+
+
+.info{
+    img.w-50{
+        @include screenSize(ss-phone){
+            width: 100% !important;
+        }
+        @include screenSize(tablet){
+            width: 75% !important;
+        }
+    }
+}
+.intro{ 
+    @include screenSize(ss-phone){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+footer{
+    flex: none;
+}

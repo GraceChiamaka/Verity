@@ -1,0 +1,29 @@
+
+@import '../../../assets/scss/variables';
+
+.request-form{
+    .form-control{
+        border:none !important;
+        border-bottom: 0.5px solid rgba(79, 79, 79, 0.6) !important;
+        background: #fff !important;
+        border-radius: 0px;
+        &:focus{
+            border: none !important;
+            border-bottom: 1px solid $color-1 !important;
+            outline-color: none  !important;
+            box-shadow: none !important;
+        }
+    }
+    textarea.form-control{
+        border: 0.5px solid rgba(79, 79, 79, 0.6) !important;
+        border-radius: 0px;
+        height: 130px;
+        &:focus{
+            border: 0.5px solid rgba(79, 79, 79, 0.6) !important;
+        }
+    }
+    .btn-block{
+        width: 100% !important;
+        text-align: center;
+    }
+}

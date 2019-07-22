@@ -1,0 +1,52 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.Square-container{
+    width: 210px;
+    height: 210px;
+    border: 1px solid $color-2;
+    transform: rotate(45deg);
+    display: inline-block;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    .Square{
+        width: 168px;
+        height: 168px;
+        background-image: url('../../assets/images/Frame.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 23px auto;
+        background-color: $color-1;
+        color:#fff;
+        text-align: center;
+        font-size: $size-2;
+        padding-top: 3.5rem;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-2;
+        }
+        span{
+            transform: rotate(-45deg);
+            height: 50px;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+    }
+}
+.mb-5e{ margin-bottom: 5rem !important; }
+@include screenSize(ss-phone){
+    .Square-container{
+        width: 180px;
+        height: 180px;
+        margin-right: 1.5rem;
+        .Square{
+            width: 140px;
+            height: 140px;
+            margin: 18px auto; 
+            padding-top: 2.5rem;
+        }
+    }
+    
+}
